@@ -38,7 +38,8 @@ const Footer = () => {
               <div className="row mt-3 footerIcon-bottomLine footer-mobile">
                 <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 footer-iconTextContainer">
                   <img src={runErrandIcon} alt="runErrand" />
-                  <i className="fas fa-gem me-3"></i>{t("Run Errand")}
+                  <i className="fas fa-gem me-3"></i>
+                  {t("Run Errand")}
                   <img
                     src={rightArrowFooterIcon}
                     alt="rightArrowFooter"
@@ -47,7 +48,8 @@ const Footer = () => {
                 </div>
                 <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 footer-iconTextContainer">
                   <img src={searchFooterIcon} alt="searchFooter" />
-                  <i className="fas fa-gem me-3"></i>{t("Search")}
+                  <i className="fas fa-gem me-3"></i>
+                  {t("Search")}
                   <img
                     src={rightArrowFooterIcon}
                     alt="rightArrowFooter"
@@ -56,7 +58,8 @@ const Footer = () => {
                 </div>
                 <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 footer-iconTextContainer">
                   <img src={pharmacyIcon} alt="Pharmacy" />
-                  <i className="fas fa-gem me-3"></i>{t("Pharmacy")}
+                  <i className="fas fa-gem me-3"></i>
+                  {t("Pharmacy")}
                   <img
                     src={rightArrowFooterIcon}
                     alt="rightArrowFooter"
@@ -65,7 +68,8 @@ const Footer = () => {
                 </div>
                 <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
                   <img src={deliveryIcon} alt="delivery" />
-                  <i className="fas fa-gem me-3"></i>{t("Delivery")}
+                  <i className="fas fa-gem me-3"></i>
+                  {t("Delivery")}
                   <img
                     src={rightArrowFooterIcon}
                     alt="rightArrowFooter"
@@ -82,11 +86,14 @@ const Footer = () => {
                 <div className="col-md-6 col-lg-3 mx-auto mb-4">
                   <img src={errandiaLogo} alt="logo" className="mb-4" />
                   <p className="footer-logoText">
-                  {t("Searching for products and services online is now easier than ever. Use Errandia to find the products and services you need, all from the comfort of your own home.")}
+                    {t(
+                      "Searching for products and services online is now easier than ever. Use Errandia to find the products and services you need, all from the comfort of your own home."
+                    )}
                   </p>
                   <div className="col-md-3 col-lg-3 mb-4">
                     <h6 className="text-uppercase fw-bold mb-4 footer-nextText">
-                      <i className="fas fa-gem"></i>{t("Download Errandia")}
+                      <i className="fas fa-gem"></i>
+                      {t("Download Errandia")}
                     </h6>
                     <div className="footer-downloadLinks">
                       <a
@@ -111,7 +118,7 @@ const Footer = () => {
                 </div>
                 <div className="col-md-6 col-lg-3 mx-auto mb-4 ">
                   <h6 className="text-uppercase fw-bold mb-4 footer-nextText">
-                  {t("Popular Categories")}
+                    {t("Popular Categories")}
                   </h6>
                   <p>
                     <ul className="footer-infoTextList">
@@ -126,20 +133,20 @@ const Footer = () => {
                 </div>
                 <div className="col-md-6 col-lg-3 mx-auto mb-4">
                   <h6 className="text-uppercase fw-bold mb-4">
-                  {t("Important links")}
+                    {t("Important links")}
                   </h6>
                   <p>
                     <ul className="footer-infoTextList">
-                    {tokenAvailable && (
-                      <li
-                        style={{ cursor: "pointer" }}
-                        onClick={() => {
-                          dispatch(modalSubscriptionToggle());
-                          dispatch(setSubscriptionModalTrue());
-                        }}
-                      >
-                        {t("Subscribe to a package")}
-                      </li>
+                      {tokenAvailable && (
+                        <li
+                          style={{ cursor: "pointer" }}
+                          onClick={() => {
+                            dispatch(modalSubscriptionToggle());
+                            dispatch(setSubscriptionModalTrue());
+                          }}
+                        >
+                          {t("Subscribe to a package")}
+                        </li>
                       )}
                       <li>
                         <Link to="about-us">{t("About Errandia")}</Link>
@@ -148,28 +155,33 @@ const Footer = () => {
                         <Link to="faqs">{t("FAQs")}</Link>
                       </li>
                       {tokenAvailable && (
-                      <li>
-                        <Link to="list-your-business">
-                        {t("Register your Business")}
-                        </Link>
-                      </li>
+                        <li>
+                          <Link to="list-your-business">
+                            {t("Register your Business")}
+                          </Link>
+                        </li>
                       )}
                       <li>
                         <Link to="privacy-policy">{t("Privacy Policy")}</Link>
                       </li>
                       <li>
-                        <Link to="terms-condition">{t("Terms of Service")}</Link>
+                        <Link to="terms-condition">
+                          {t("Terms of Service")}
+                        </Link>
                       </li>
                     </ul>
                   </p>
                 </div>
                 <div className="col-md-6 col-lg-3 mx-auto mb-md-0 mb-4">
-                  <h6 className="text-uppercase fw-bold mb-4">{t("Find us")}</h6>
+                  <h6 className="text-uppercase fw-bold mb-4">
+                    {t("Find us")}
+                  </h6>
                   <p>
                     <img src={footerLocationIcon} alt="footerLocation" />
                     <h7 className="footer-officeEmailText">{t("Office")}</h7>
                     <div>
-                      <i></i> {t("St. Claire Building, Molyko, Buea, SWR, Cameroon")}
+                      <i></i>{" "}
+                      {t("St. Claire Building, Molyko, Buea, SWR, Cameroon")}
                     </div>
                   </p>
                   <p>
@@ -186,9 +198,12 @@ const Footer = () => {
           </section>
 
           <div className="text-center p-4 footer-bottom">
-          {t("© 2024 errandia.com. All rights reserved.")}
+            Let see
+            {t("© 2024 errandia.com. All rights reserved.")}
             <div className="footer-bottom-images">
-              <div className="text-reset fw-bold">{t("Pay securely with")}:</div>
+              <div className="text-reset fw-bold">
+                {t("Pay securely with")}:
+              </div>
               <div className="payment-icons">
                 <img
                   src={MtnMoney}
