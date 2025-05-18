@@ -198,7 +198,6 @@ const Footer = () => {
           </section>
 
           <div className="text-center p-4 footer-bottom">
-            Let see
             {t("© 2024 errandia.com. All rights reserved.")}
             <div className="footer-bottom-images">
               <div className="text-reset fw-bold">
