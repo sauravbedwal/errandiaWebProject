@@ -1,0 +1,3765 @@
+    <Modal
+        show={signUpModalBoolean}
+        size="xl"
+        className="runErrandPopUpSignUpFormSignUpForm-modal"
+      >
+        {/* <Modal.Header closeButton style={{ border: "none" }}> */}
+        {/* <Modal.Title>Run an Errand</Modal.Title> */}
+        {/* <div className="runErrandPopUpSignUpFormTab-container">
+            <div
+              className={`tab ${
+                activeTab === "signup" ? "active" : "inactive"
+              }`}
+              id="signup-tab"
+              onClick={() => setActiveTab("signup")}
+            >
+              Sign Up
+              <div className="runErrandPopUpSignUpFormTabTriangle"></div>
+            </div>
+            <div
+              className={`tab ${
+                activeTab === "signin" ? "active" : "inactive"
+              }`}
+              id="signin-tab"
+              onClick={() => {
+                setActiveTab("signin");
+                navigate("/");
+              }}
+            >
+              Sign In
+              <div className="runErrandPopUpSignUpFormTabTriangle"></div>
+            </div>
+          </div> */}
+        {/* </Modal.Header> */}
+
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 runErrandPopUpSignUpForm-imageContainer">
+              <div className="runErrandPopUpSignUpForm-cross-mobileScreen">
+                <h3 className="modal-header-heading">Run an Errand</h3>
+                <div className="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 runErrandPopUpSignUpForm-cross">
+                  <img
+                    src={modalCross}
+                    className="img-fluid"
+                    onClick={() => {
+                      dispatch(signUpModalToggle());
+                      dispatch(setSignUpModalFalse());
+                    }}
+                  />
+                </div>
+              </div>
+              <img
+                src={RunErrandPopUpSignUpFormImage}
+                alt="RunErrandPopUpSignUpFormImage"
+                className="img-fluid"
+              />
+            </div>
+            <div className="col-xl-7 col-lg-7 col-md-7 col-sm-11 col-11">
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <div className="runErrandPopUpSignUpFormTab-container">
+                  <div
+                    className={`tab ${
+                      activeTab === "signup" ? "active" : "inactive"
+                    }`}
+                    id="signup-tab"
+                    onClick={() => setActiveTab("signup")}
+                  >
+                    Sign Up
+                    <div className="runErrandPopUpSignUpFormTabTriangle"></div>
+                  </div>
+                  <div
+                    className={`tab ${
+                      activeTab === "signin" ? "active" : "inactive"
+                    }`}
+                    id="signin-tab"
+                  >
+                    Sign In
+                    <div className="runErrandPopUpSignUpFormTabTriangle"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="form-background">
+                <Modal.Body>
+                  <Form>
+                    <div className="runErrandPopUpSignUpFormTab-signUpForm-heading">
+                      Create your account to run an errand
+                    </div>
+
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label className="runErrandPopUpSignUpFormTab-form-input-heading">
+                        Full Name
+                      </Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="Enter your name"
+                        className="runErrandPopUpSignUpFormTab-formInput"
+                      />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label className="runErrandPopUpSignUpFormTab-form-input-heading">
+                        Email
+                      </Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="Enter your email"
+                        className="runErrandPopUpSignUpFormTab-formInput"
+                      />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label className="runErrandPopUpSignUpFormTab-form-input-heading">
+                        Phone Number
+                      </Form.Label>
+                      <PhoneInput country="us" inputStyle={inputStyle} />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label className="runErrandPopUpSignUpFormTab-form-input-heading">
+                        WhatsApp Number
+                      </Form.Label>
+                      <PhoneInput country="us" inputStyle={inputStyle} />
+                    </Form.Group>
+
+                    <div className="d-flex align-items-center">
+                      <Form.Group
+                        className="mb-3 mt-2"
+                        controlId="formBasicCheckbox"
+                      >
+                        <Form.Check
+                          type="checkbox"
+                          className="runErrandPopUpSignUpFormTab-checkbox-line"
+                          label={
+                            <p>
+                              By Signing up you agree to our{" "}
+                              <span style={{ color: "#1B81DC" }}>
+                                terms and conditions.
+                              </span>
+                            </p>
+                          }
+                        />
+                      </Form.Group>
+                    </div>
+
+                    <div className="runErrandPopUpSignUpForm-buttons">
+                      <div className="d-flex flex-column align-items-center gap-3">
+                        <Button
+                          variant="primary"
+                          className={"runErrandPopUpSignUpForm-goBack"}
+                        >
+                          <img
+                            src={runErrandPopUpSignUpFormBackArrow}
+                            alt="runErrandPopUpSignUpFormBackArrow"
+                          />
+                          Go Back
+                        </Button>
+                      </div>
+                      <div className="d-flex flex-column align-items-center gap-3">
+                        <Button
+                          variant="primary"
+                          className="runErrandPopUpSignUpForm-signIn-blue"
+                        >
+                          Sign Up
+                        </Button>
+                      </div>
+                    </div>
+                  </Form>
+                </Modal.Body>
+              </div>
+              <Modal.Footer className="runErrandPopUpSignUpForm-modalFooter"></Modal.Footer>
+            </div>
+            <div className="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 runErrandPopUpSignUp-image">
+              <img
+                src={modalCross}
+                className="img-fluid"
+                onClick={() => {
+                  dispatch(signUpModalToggle());
+                  dispatch(setSignUpModalFalse());
+                }}
+              />
+            </div>
+          </div> 
+        </div>
+      </Modal>
+      
+
+
+
+         <nav aria-label="Page navigation example">
+        <ul className="pagination pagination-ul-list">
+          <li
+            className={`page-item pagination-background-box ${
+              activePage === "prev" ? "active" : ""
+            }`}
+            onClick={() => handlePageClick("prev")}
+          >
+            <Link className="page-link" to="#">
+              <img src={paginationLeftIcon} alt="Previous" />
+            </Link>
+          </li>
+          {[1, 2, 3, 4, 5].map((pageNumber) => (
+            <li
+              key={pageNumber}
+              className={`page-item ${
+                activePage === pageNumber ? "active" : ""
+              }`}
+              onClick={() => handlePageClick(pageNumber)}
+            >
+              <Link className="page-link" to={`/page/${pageNumber}`}>
+                {pageNumber}
+              </Link>
+            </li>
+          ))}
+          <li
+            className={`page-item pagination-background-box ${
+              activePage === "next" ? "active" : ""
+            }`}
+            onClick={() => handlePageClick("next")}
+          >
+            <Link className="page-link" to="#">
+              <img src={paginationRightIcon} alt="Next" />
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+
+
+
+////////////////////////////
+
+{
+  /* Hidden File Input */
+}
+{
+  /* <input
+                  type="file"
+                  id="file-input"
+                  accept=".jpg,.jpeg,.png"
+                  style={{ display: "none" }}
+                  //   onChange={(e) => {
+                  //     console.log(e.target.files[0]);
+                  //   }} // Handle file selection
+                  onChange={handleFileChange}
+                /> */
+}
+
+{
+  /* Custom File Input UI */
+}
+{
+  /* <label
+                  htmlFor="file-input"
+                  className="userProfileAddProduct-custom-file-input-container"
+                >
+                  <div className="listYourBusinessHomeForm-custom-file-content">
+                    <img
+                      src={runErrandPopUpimageUploader}
+                      alt="Upload Icon"
+                      className="img-fluid"
+                    />
+                    <div>
+                      <div className="runErrandPopUp-imageTagHeading">
+                        Choose a file or drag and drop it here
+                      </div>
+                      <p className="runErrandPopUp-imageTag-SubHeading">
+                        jpg, jpeg, or png of up to 10mb
+                      </p>
+                    </div>
+                  </div>
+                  <Button
+                    variant="primary"
+                    className="runErrandPopUp-browseFilesButton"
+                    onClick={handleFileButtonClick}
+                  >
+                    <img
+                      src={runErrandPopUpBrowseFiles}
+                      alt="Browse Files Icon"
+                    />
+                    Browse Files
+                  </Button>
+                </label>
+              </Form.Group> */
+}
+
+{
+  /* <div className="listYourBusinessHomeForm-uploadedImageDelete">
+                <div className="listYourBusinessHomeForm-uploadedImage">
+                  <img src={runErrandPopUpUploadedImage} />
+                  <p>IMG20240203.JPG</p>
+                </div>
+                <img src={runErrandPopUpDelete} />
+              </div> */
+}
+
+{
+  /* <option selected>
+                    select <a href=""></a> category
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option> */
+}
+
+{
+  /* <option selected>select business category</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option> */
+}
+
+
+
+///////////////////////////
+
+
+
+
+
+
+
+createFallbackImage
+      openGoogleMaps
+      on region api call 
+      SearchServices cindtonal render the data coy in product 
+      pass params logitude latitude and distance
+      
+      
+      AllBusinessOptions
+      BusinessUserView
+      NavbarWithSearch
+      ProductDetailsProduct
+
+      width 400 only in Services from this Business
+
+
+
+
+
+
+Filters and search
+ dispatch(toggle());
+                    dispatch(setFalse());
+                    dispatch(region(null));
+                    dispatch(town(null));
+                    dispatch(selectedRegion(null));
+                    dispatch(selectedTown(null));
+    <Offcanvas show={boolean}>
+        <Offcanvas.Body>
+          <div className="container filter-offCanvas">
+            <div className="row">
+              <div className="filtersAndSearch-headingContainer">
+                <h4 className="filtersAndSearch-heading">Filters</h4>
+                <p
+                  className="filtersAndSearch-subHeading"
+                  onClick={() => {
+                    dispatch(toggle());
+                    dispatch(setFalse());
+                    dispatch(region(null));
+                    dispatch(town(null));
+                    dispatch(selectedRegion(null));
+                    dispatch(selectedTown(null));
+                  }}
+                >
+                  Clear All
+                </p>
+              </div>
+
+              <div>
+                <div className="filter-container">
+                  <h4 className="filter-heading">Region</h4>
+                  <div
+                    className="filtersAndSearch-upArrowContainer"
+                    onClick={() =>
+                      setOpen((prev) => {
+                        return { ...prev, region: !prev.region };
+                      })
+                    }
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open}
+                  >
+                    <img
+                      src={
+                        open.region === true ? filterUpArrow : filterDownArrow
+                      }
+                      alt="filterUpArrow"
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+
+                <Collapse in={open.region}>
+                  <div id="example-collapse-text">
+                    <Form className="filter-first">
+                      {regionsFromStore &&
+                        regionsFromStore.map((region, key) => {
+                          return (
+                            <div className="d-flex align-items-center">
+                              <Form.Group
+                                className="mb-3"
+                                controlId="formBasicCheckbox"
+                              >
+                                <Form.Check
+                                  type="radio"
+                                  className="filter-option"
+                                  key={region.id}
+                                  label={<p>{region.name}</p>}
+                                />
+                              </Form.Group>
+                            </div>
+                          );
+                        })}
+                    </Form>
+                  </div>
+                </Collapse>
+              </div>
+              {/* <div>
+                <div className="filter-container">
+                  <h4 className="filter-heading">Region</h4>
+                  <div
+                    className="filtersAndSearch-upArrowContainer"
+                    onClick={() =>
+                      setOpen((prev) => {
+                        return { ...prev, region: !prev.region };
+                      })
+                    }
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open}
+                  >
+                    <img
+                      src={
+                        open.region === true ? filterUpArrow : filterDownArrow
+                      }
+                      alt="filterUpArrow"
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+
+                <Collapse in={open.region}>
+                  <div id="example-collapse-text">
+                    <Form className="filter-first">
+                      <div className="d-flex align-items-center">
+                        <Form.Group
+                          className="mb-3"
+                          controlId="formBasicCheckbox"
+                        >
+                          <Form.Check
+                            type="radio"
+                            className="filter-option"
+                            label={<p>Adamawa - AD (10) </p>}
+                          />
+                        </Form.Group>
+                      </div>
+
+                      <div className="d-flex align-items-center">
+                        <Form.Group
+                          className="mb-3"
+                          controlId="formBasicCheckbox"
+                        >
+                          <Form.Check
+                            type="radio"
+                            className="filter-option"
+                            label={<p>Centre - CE (20) </p>}
+                          />
+                        </Form.Group>
+                      </div>
+
+                      <div className="d-flex align-items-center">
+                        <Form.Group
+                          className="mb-3"
+                          controlId="formBasicCheckbox"
+                        >
+                          <Form.Check
+                            type="radio"
+                            className="filter-option"
+                            label={<p>Far North - FN (16) </p>}
+                          />
+                        </Form.Group>
+                      </div>
+
+                      <div className="d-flex align-items-center">
+                        <Form.Group
+                          className="mb-3"
+                          controlId="formBasicCheckbox"
+                        >
+                          <Form.Check
+                            type="radio"
+                            className="filter-option"
+                            label={<p>South-West - SW (24) </p>}
+                          />
+                        </Form.Group>
+                      </div>
+
+                      <div className="d-flex align-items-center">
+                        <Form.Group
+                          className="mb-3"
+                          controlId="formBasicCheckbox"
+                        >
+                          <Form.Check
+                            type="radio"
+                            className="filter-option"
+                            label={<p>West - WE (02) </p>}
+                          />
+                        </Form.Group>
+                      </div>
+                    </Form>
+                  </div>
+                </Collapse>
+              </div> */}
+
+              <div>
+                <div className="filter-container">
+                  <h4 className="filter-heading">Town</h4>
+                  <div
+                    className="filtersAndSearch-upArrowContainer"
+                    onClick={() =>
+                      setOpen((prev) => {
+                        return { ...prev, town: !prev.town };
+                      })
+                    }
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open}
+                  >
+                    <img
+                      src={open.town === true ? filterUpArrow : filterDownArrow}
+                      alt="filterUpArrow"
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+
+                <Collapse in={open.town}>
+                  <div id="example-collapse-text">
+                    <div className="input-group rounded filter-searchContainer">
+                      <input
+                        type="search"
+                        className="form-control rounded filter-search-input"
+                        placeholder="Search"
+                        aria-label="Search"
+                        aria-describedby="search-addon"
+                      />
+                      <span
+                        className="input-group-text border-0 filter-image"
+                        id="search-addon"
+                      >
+                        <img src={filterSearch} />
+                      </span>
+                    </div>
+
+                    <Form className="filter-second">
+                      {townsByRegionFromStore?.map((towns, key) => {
+                        return (
+                          <div className="d-flex align-items-center">
+                            <Form.Group
+                              className="mb-3"
+                              controlId="formBasicCheckbox"
+                            >
+                              <Form.Check
+                                type="radio"
+                                className="filter-option"
+                                key={towns.id}
+                                label={<p>{towns.name}</p>}
+                              />
+                            </Form.Group>
+                          </div>
+                        );
+                      })}
+                    </Form>
+                  </div>
+                </Collapse>
+              </div>
+              {/* <div>
+                <div className="filter-container">
+                  <h4 className="filter-heading">Town</h4>
+                  <div
+                    className="filtersAndSearch-upArrowContainer"
+                    onClick={() =>
+                      setOpen((prev) => {
+                        return { ...prev, town: !prev.town };
+                      })
+                    }
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open}
+                  >
+                    <img
+                      src={open.town === true ? filterUpArrow : filterDownArrow}
+                      alt="filterUpArrow"
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+
+                <Collapse in={open.town}>
+                  <div id="example-collapse-text">
+                    <div className="input-group rounded filter-searchContainer">
+                      <input
+                        type="search"
+                        className="form-control rounded filter-search-input"
+                        placeholder="Search"
+                        aria-label="Search"
+                        aria-describedby="search-addon"
+                      />
+                      <span
+                        className="input-group-text border-0 filter-image"
+                        id="search-addon"
+                      >
+                        <img src={filterSearch} />
+                      </span>
+                    </div>
+
+                    <Form className="filter-second">
+                      <div className="d-flex align-items-center">
+                        <Form.Group
+                          className="mb-3"
+                          controlId="formBasicCheckbox"
+                        >
+                          <Form.Check
+                            type="radio"
+                            className="filter-option"
+                            label={<p>Buea (10) </p>}
+                          />
+                        </Form.Group>
+                      </div>
+
+                      <div className="d-flex align-items-center">
+                        <Form.Group
+                          className="mb-3"
+                          controlId="formBasicCheckbox"
+                        >
+                          <Form.Check
+                            type="radio"
+                            className="filter-option"
+                            label={<p>Kumba (4)</p>}
+                          />
+                        </Form.Group>
+                      </div>
+
+                      <div className="d-flex align-items-center">
+                        <Form.Group
+                          className="mb-3"
+                          controlId="formBasicCheckbox"
+                        >
+                          <Form.Check
+                            type="radio"
+                            className="filter-option"
+                            label={<p>Limbe (6) </p>}
+                          />
+                        </Form.Group>
+                      </div>
+
+                      <div className="d-flex align-items-center">
+                        <Form.Group
+                          className="mb-3"
+                          controlId="formBasicCheckbox"
+                        >
+                          <Form.Check
+                            type="radio"
+                            className="filter-option"
+                            label={<p>Mutengene (2)</p>}
+                          />
+                        </Form.Group>
+                      </div>
+
+                      <div className="d-flex align-items-center">
+                        <Form.Group
+                          className="mb-3"
+                          controlId="formBasicCheckbox"
+                        >
+                          <Form.Check
+                            type="radio"
+                            className="filter-option"
+                            label={<p>Tiko (1)</p>}
+                          />
+                        </Form.Group>
+                      </div>
+                    </Form>
+                  </div>
+                </Collapse>
+              </div> */}
+
+              <div className="filter-adBanner">
+                <img src={sideBarAd} className="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </Offcanvas.Body>
+      </Offcanvas>
+
+
+      -------------------------
+
+      // const ErrandiaBooster = ({ setIsOpen, isOpen, plans, setPlans, shopId }) => {
+//   const errandiaBooster = useSelector((store) => store?.errandiaBooster?.value);
+//   const dispatch = useDispatch();
+//   const [activeStep, setActiveStep] = useState(0);
+//   const [loading, setLoading] = useState(true);
+//   const [message, setMessage] = useState("");
+//   const [makePlan, setMakePlan] = useState({
+//     name: null,
+//     unit_price: null,
+//     currency: null,
+//     period: null,
+//   });
+
+//   const [subscribe, setSubscribe] = useState({
+//     plan_id: null,
+//     shop_id: shopId,
+//     phone_number: null,
+//   });
+
+//   console.log("booster", makePlan, subscribe);
+//   const [isPaymentFailed, setIsPaymentFailed] = useState(false);
+
+//   const [paymentStatus, setPaymentStatus] = useState(null);
+//   const [paymentId, setPaymentId] = useState(null);
+
+//   const steps = ["Select Plan", "Confirm Payment"];
+
+//   const handleNext = () => {
+//     console.log("check");
+//     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+//     console.log("activeStep handleNext", activeStep);
+//   };
+
+//   const handleBack = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+//     setMakePlan((prev) => {
+//       return {
+//         ...prev,
+//         name: null,
+//         unit_price: null,
+//         currency: null,
+//         period: null,
+//       };
+//     });
+//     setSubscribe({
+//       plan_id: null,
+//       shop_id: null,
+//       phone_number: null,
+//     });
+//     setIsPaymentFailed(false);
+//   };
+
+//   const handleReset = () => {
+//     setActiveStep(0);
+//     setLoading(true);
+//     setMessage("");
+//     setIsPaymentFailed(false);
+//     setMakePlan((prev) => {
+//       return {
+//         ...prev,
+//         name: null,
+//         unit_price: null,
+//         currency: null,
+//         period: null,
+//       };
+//     });
+//     setSubscribe({
+//       plan_id: null,
+//       shop_id: null,
+//       phone_number: null,
+//     });
+//     dispatch(modalErrandiaBoosterToggle());
+//     dispatch(setErrandiaBoosterModalFalse());
+//     setIsOpen(false);
+//   };
+
+//   // const handleClose = () => {
+//   //   setMessage(
+//   //     "Payment UnsuccessfulAn error occured while processing your payments. You can try it out again"
+//   //   ); // Force failure message
+//   //   setLoading(false); // Stop loading state
+//   // };
+
+//   useEffect(() => {
+//     if (activeStep === steps.length && !loading) {
+//       const timer = setTimeout(() => {
+//         handleReset();
+//       }, 3000);
+
+//       return () => clearTimeout(timer);
+//     }
+//   }, [activeStep, loading]);
+
+//   const inputStyle = {
+//     width: "100%",
+//     height: "35px",
+//     borderRadius: "10px",
+//     border: "1px solid #eceff2",
+//     outline: "none",
+//   };
+
+//   // const fetchAllBoosterPlans = async () => {
+//   //   try {
+//   //     const params = new URLSearchParams({
+//   //       type: "boosting",
+//   //     });
+//   //     dispatch(setIsPending(true));
+//   //     const res = await getApi(apis.getAllPlans + `?${params}`);
+
+//   //     console.log("fetchAllBoosterPlans", res);
+//   //     dispatch(setIsPending(false));
+//   //     setPlans(res.data.data.items);
+//   //   } catch (err) {
+//   //     dispatch(setIsPending(false));
+//   //     console.log(err);
+//   //     notifyError("Oops! The request was not found.");
+//   //   }
+//   // };
+//   console.log(errandiaBooster, "2222 OUT");
+
+//   // useEffect(() => {
+//   //   console.log(errandiaBooster, "2222");
+//   //   fetchAllBoosterPlans();
+//   // }, []);
+//   // fetchAllBoosterPlans();
+
+//   const purchasePlan = async () => {
+//     if (!subscribe?.phone_number) {
+//       notifyError("Phone Number is required for subscription!");
+//       return;
+//     }
+
+//     setIsPaymentFailed(false);
+//     setLoading(true);
+//     console.log("handleNext");
+//     handleNext();
+
+//     try {
+//       dispatch(setIsPending(true));
+//       const res = await postApi(apis.subscribePlan, subscribe, token());
+
+//       if (res.data.message === "Payment request done") {
+//         setPaymentId(res.data.data.id); // Store the Payment ID
+//         setPaymentStatus("PENDING"); // Start polling
+
+//         console.log("Payment initiated, Payment ID:", paymentId); // Debugging
+//       }
+//     } catch (err) {
+//       console.log(err);
+//       if (
+//         err.response?.data?.message ===
+//         "You are already under a subscription plan"
+//       ) {
+//         notifyError("You are already under a subscription plan");
+
+//         // Reset and close modal immediately
+//         setActiveStep(0);
+//         setLoading(false);
+//         setMakePlan({
+//           name: null,
+//           unit_price: null,
+//           currency: null,
+//           period: null,
+//         });
+//         setSubscribe({ plan_id: null, shop_id: null, phone_number: null });
+//         dispatch(modalErrandiaBoosterToggle());
+//         dispatch(setErrandiaBoosterModalFalse());
+//         setIsOpen(false);
+
+//         return; // Exit early, so no further screens open
+//       }
+
+//       // Default error handling
+//       notifyError("Oops! The request was not found.");
+//       dispatch(setIsPending(false));
+//       setMessage(
+//         "Payment Unsuccessful. An error occurred while processing your payment. You can try again."
+//       );
+//       setLoading(false);
+//       setIsPaymentFailed(true);
+//     }
+//   };
+
+//   useEffect(() => {
+//     if (paymentStatus !== "PENDING" || !paymentId) return; // Only run if status is pending
+
+//     const interval = setInterval(async () => {
+//       try {
+//         const resStatus = await getApi(
+//           apis.subscriptionStatus + `/${paymentId}/check-status`,
+//           token()
+//         );
+
+//         const status = resStatus?.data?.data?.item?.status?.trim(); // Trim to avoid space issues
+//         console.log("Polling status:", status);
+
+//         if (status === "FAILED" || status === "SUCCESS") {
+//           clearInterval(interval);
+//           dispatch(setIsPending(false));
+//           setLoading(false);
+//           setPaymentStatus(status);
+
+//           if (status === "FAILED") {
+//             setIsPaymentFailed(true);
+//             setMessage("Payment Unsuccessful. Please try again.");
+//           } else {
+//             setIsPaymentFailed(false);
+//             setMessage(
+//               "You can now access unlimited errands with your current plan"
+//             );
+//           }
+//         } else {
+//           dispatch(setIsPending(true)); // Keep loader active while status is PENDING
+//         }
+//       } catch (err) {
+//         console.log("Error checking payment status:", err);
+//         clearInterval(interval);
+//         setIsPaymentFailed(true);
+//         setMessage(
+//           "Payment Unsuccessful. An error occurred while processing your payment. You can try again."
+//         );
+//         setLoading(false);
+//       }
+//     }, 3000); // Poll every 3 seconds
+
+//     return () => clearInterval(interval); // Cleanup on unmount
+//   }, [paymentStatus, paymentId]);
+
+//   const isPendingFromStore = useSelector(
+//     (store) => store?.searchProduct?.isPending
+//   );
+//   return (
+//     <>
+//       <Modal
+//         size="lg"
+//         show={isOpen}
+//         aria-labelledby="example-modal-sizes-title-lg"
+//         className="featuredBusinessProfileShare-modal-Container errandiaBooster-modal"
+//       >
+//         <Modal.Header
+//           closeButton
+//           className="featureBusinessProfileShare-modal-header errandiaBooster-modal-header"
+//           onClick={() => {
+//             dispatch(modalErrandiaBoosterToggle());
+//             dispatch(setErrandiaBoosterModalFalse());
+//             setIsOpen(false);
+//             setActiveStep(0);
+//             setMakePlan((prev) => {
+//               return {
+//                 ...prev,
+//                 name: null,
+//                 unit_price: null,
+//                 currency: null,
+//                 period: null,
+//               };
+//             });
+//             setSubscribe({
+//               plan_id: null,
+//               shop_id: null,
+//               phone_number: null,
+//             });
+//           }}
+//         >
+//           <Modal.Title
+//             id="example-modal-sizes-title-lg"
+//             className="featureBusinessProfileShare-heading"
+//           >
+//             Errandia Booster
+//           </Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>
+//           <div className="container p-3">
+//             <div className="text-center">
+//               <Stepper activeStep={activeStep} alternativeLabel>
+//                 {steps.map((label, index) => (
+//                   <Step key={index}>
+//                     <StepLabel></StepLabel>
+//                   </Step>
+//                 ))}
+//               </Stepper>
+//               {activeStep === steps.length ? (
+//                 <>
+//                   {loading ? (
+//                     <>
+//                       <div className="mt-5 text-center">
+//                         {/* Loader */}
+//                         <Loader />
+//                         <h2 className="mt-4">Processing Payments</h2>
+//                         <p className="mt-2">
+//                           A mobile money alert will be sent to you shortly to
+//                           confirm your <b> Business Booster Plan</b>{" "}
+//                           subscription of 5,000 XAF
+//                         </p>
+//                         <p className="mt-4">
+//                           If you have questions or need support, contact us at{" "}
+//                           <a href="#">admin@errandia.com</a>
+//                         </p>
+//                         {/* <Button
+//                           variant="contained"
+//                           className="w-50 header-button-blue mt-4  text-center"
+//                           onClick={handleClose}
+//                         >
+//                           Close
+//                         </Button> */}
+//                       </div>
+//                     </>
+//                   ) : (
+//                     <>
+//                       {isPaymentFailed ? (
+//                         <div className="failure-message">
+//                           <svg
+//                             width="191"
+//                             height="191"
+//                             viewBox="0 0 191 191"
+//                             fill="none"
+//                             xmlns="http://www.w3.org/2000/svg"
+//                           >
+//                             <rect
+//                               x="0.5"
+//                               y="0.5"
+//                               width="190"
+//                               height="190"
+//                               rx="12"
+//                               fill="#F1F4FF"
+//                             />
+//                             <path
+//                               d="M147.773 51.4102H44.1367V155.047H147.773V51.4102Z"
+//                               fill="#A7AFFF"
+//                             />
+//                             <path
+//                               d="M132 77.5038L133.061 76.4432L132 75.3825L125.057 68.4393L123.996 67.3787L122.936 68.4393L96.4697 94.9052L70.0038 68.4393L68.9432 67.3787L67.8825 68.4393L60.9393 75.3825L59.8787 76.4432L60.9393 77.5038L87.4052 103.97L60.9393 130.436L59.8787 131.496L60.9393 132.557L67.8825 139.5L68.9432 140.561L70.0038 139.5L96.4697 113.034L122.936 139.5L123.996 140.561L125.057 139.5L132 132.557L133.061 131.496L132 130.436L105.534 103.97L132 77.5038Z"
+//                               fill="#1006AC"
+//                               stroke="#1006AC"
+//                               strokeWidth="3"
+//                             />
+//                           </svg>
+
+//                           <h2 className="mt-4">Payment Unsuccessful</h2>
+//                           <p className="mt-2">{message}</p>
+//                           <div className="mt-4 d-flex justify-content-center gap-4">
+//                             <Button
+//                               onClick={() => setActiveStep(0)}
+//                               className="w-25 header-button-blue "
+//                             >
+//                               Retry
+//                             </Button>
+//                             <Button
+//                               className="w-25 btn-back"
+//                               onClick={handleReset}
+//                             >
+//                               Close
+//                             </Button>
+//                           </div>
+//                         </div>
+//                       ) : (
+//                         <div className="success-message">
+//                           <svg
+//                             width="209"
+//                             height="210"
+//                             viewBox="0 0 209 210"
+//                             fill="none"
+//                             xmlns="http://www.w3.org/2000/svg"
+//                           >
+//                             <rect
+//                               y="0.5"
+//                               width="209"
+//                               height="209"
+//                               rx="12"
+//                               fill="#F1F4FF"
+//                             />
+//                             <path
+//                               d="M162 56.5H48V170.5H162V56.5Z"
+//                               fill="#A7AFFF"
+//                             />
+//                             <path
+//                               d="M143.136 101.554L130.254 89.1435L166.908 51.3398L179.787 63.75L143.136 101.554Z"
+//                               fill="#2718FF"
+//                             />
+//                             <path
+//                               d="M162.001 56.5H161.938L88.4551 132.772L101.337 145.183L162.001 82.2165V56.5Z"
+//                               fill="#020053"
+//                             />
+//                             <path
+//                               d="M75.2044 95.3453L62.8203 108.254L101.34 145.209L113.725 132.3L75.2044 95.3453Z"
+//                               fill="#020053"
+//                             />
+//                           </svg>
+
+//                           <h2 className="mt-4">Payment Successful</h2>
+//                           <p className="mt-2">{message}</p>
+//                           <Button
+//                             variant="contained"
+//                             className="w-50 header-button-blue mt-4  text-center"
+//                             onClick={handleReset}
+//                           >
+//                             Okay
+//                           </Button>
+//                         </div>
+//                       )}
+//                     </>
+//                   )}
+//                 </>
+//               ) : (
+//                 <div className="mt-4">
+//                   {activeStep === 0 && (
+//                     <>
+//                       <div className="text-center">
+//                         <h2 className=" mt-4">Buy a Booster</h2>
+//                         <p className="mt-2">
+//                           Get a plan now and enjoy premium features on Errandia
+//                         </p>
+//                       </div>
+//                       <div className="d-flex gap-4 justify-content-center flex-wrap mt-5">
+//                         {isPendingFromStore ? (
+//                           <Loader />
+//                         ) : (
+//                           plans?.map((plan) => {
+//                             return (
+//                               <Card className="card-subscription border rounded-lg">
+//                                 <p className="popular-sec-errandiaBooster">
+//                                   Popular
+//                                 </p>
+//                                 <CardContent className="p-4">
+//                                   <h4 className="text-lg font-bold">
+//                                     {plan?.name}
+//                                   </h4>
+//                                   <h2
+//                                     className="text-2xl font-bold"
+//                                     // style={{ color: "#1607FA" }}
+//                                   >
+//                                     {`${plan?.unit_price}${plan?.currency}`}
+//                                   </h2>
+//                                   <p className=""> per month</p>
+//                                   <p className="time-errandiaBooster">
+//                                     Free for {plan?.duration_time} month
+//                                   </p>
+//                                   {/* <h5 className="text-lg font-semibold mt-3">
+//                             Packages
+//                           </h5> */}
+//                                   <div className="d-flex mt-4">
+//                                     <svg
+//                                       width="25"
+//                                       height="24"
+//                                       viewBox="0 0 25 24"
+//                                       fill="none"
+//                                       xmlns="http://www.w3.org/2000/svg"
+//                                     >
+//                                       <path
+//                                         fill-rule="evenodd"
+//                                         clip-rule="evenodd"
+//                                         d="M9.50039 16.2016L5.30039 12.0016L3.90039 13.4016L9.50039 19.0016L21.5004 7.00156L20.1004 5.60156L9.50039 16.2016Z"
+//                                         fill="#2718FF"
+//                                       />
+//                                     </svg>
+//                                     <p>{plan?.description}</p>
+//                                   </div>
+
+//                                   <Button
+//                                     variant="contained"
+//                                     className="w-full mt-3"
+//                                     style={{ backgroundColor: "#171A1F" }}
+//                                     onClick={() => {
+//                                       handleNext();
+//                                       setMakePlan((prev) => {
+//                                         return {
+//                                           ...prev,
+//                                           name: plan?.name,
+//                                           unit_price: plan?.unit_price,
+//                                           currency: plan?.currency,
+//                                           period: plan?.period,
+//                                         };
+//                                       });
+//                                       setSubscribe((prev) => {
+//                                         return {
+//                                           ...prev,
+//                                           plan_id: plan?.id,
+//                                         };
+//                                       });
+//                                     }}
+//                                   >
+//                                     Subscribe now
+//                                   </Button>
+//                                 </CardContent>
+//                               </Card>
+//                             );
+//                           })
+//                         )}
+//                       </div>
+//                     </>
+//                   )}
+//                   {activeStep === 1 && (
+//                     <div className="text-center">
+//                       <div className="text-center">
+//                         <h2 className=" mt-4">Make Payment</h2>
+//                         <p className="mt-2">
+//                           how will you like to pay for your subscription
+//                         </p>
+//                       </div>
+//                       <div className="d-flex justify-content-center">
+//                         <div className="amount-card-errandia">
+//                           <div className="d-flex" style={{ zIndex: "1" }}>
+//                             <div className="ms-2" style={{ textAlign: "left" }}>
+//                               <p className="text-left">Subscribe to:</p>
+//                               <h5>{makePlan?.name}</h5>
+//                             </div>
+//                           </div>
+//                           <div style={{ zIndex: "1" }} className="text-end">
+//                             <h5>{`${makePlan?.unit_price}${makePlan?.currency}`}</h5>
+//                             <p> per {makePlan?.period}</p>
+//                           </div>
+//                         </div>
+//                       </div>
+//                       <div className="d-flex justify-content-center">
+//                         <div className="phone-input-sub">
+//                           <Form.Group className="" controlId="formBasicEmail">
+//                             <Form.Label className="runErrandPopUpSignUpFormTab-form-input-heading">
+//                               Phone Number *
+//                             </Form.Label>
+//                             <PhoneInput
+//                               country="cm"
+//                               inputStyle={inputStyle}
+//                               onlyCountries={["cm"]}
+//                               value={subscribe?.phone_number}
+//                               onChange={(e) => {
+//                                 setSubscribe((prev) => {
+//                                   return {
+//                                     ...prev,
+//                                     phone_number: `+${e}`,
+//                                   };
+//                                 });
+//                               }}
+//                             />
+//                           </Form.Group>
+//                         </div>
+//                       </div>
+//                       <div className="mt-4 d-flex justify-content-center gap-4">
+//                         <Button
+//                           onClick={handleBack}
+//                           className="w-full btn-back-erra"
+//                         >
+//                           <svg
+//                             width="17"
+//                             height="17"
+//                             viewBox="0 0 17 17"
+//                             fill="none"
+//                             xmlns="http://www.w3.org/2000/svg"
+//                           >
+//                             <path
+//                               d="M5.71602 9.16797L9.44935 12.9013L8.49935 13.8346L3.16602 8.5013L8.49935 3.16797L9.44935 4.1013L5.71602 7.83464H13.8327V9.16797H5.71602Z"
+//                               fill="#171A1F"
+//                             />
+//                           </svg>
+//                           Go Back
+//                         </Button>
+//                         <Button
+//                           variant="contained"
+//                           className="w-full"
+//                           style={{ backgroundColor: "#171A1F" }}
+//                           onClick={purchasePlan}
+//                         >
+//                           Pay and Subscribe
+//                         </Button>
+//                       </div>
+//                     </div>
+//                   )}
+//                 </div>
+//               )}
+//             </div>
+//           </div>
+//         </Modal.Body>
+//       </Modal>
+//     </>
+//   );
+// };
+
+// export default ErrandiaBooster;
+
+
+----
+
+subscriptionModal
+ // const purchasePlan = async () => {
+  //   if (!subscribe?.phone_number) {
+  //     notifyError("Phone Number is required for subscription!");
+  //     return;
+  //   }
+
+  //   setIsPaymentFailed(false);
+  //   setLoading(true);
+  //   handleNext();
+
+  //   try {
+  //     dispatch(setIsPending(true));
+  //     const res = await postApi(apis.subscribePlan, subscribe, token());
+
+  //     if (res.data.message === "Payment request done") {
+  //       const resStatus = await getApi(
+  //         apis.subscriptionStatus + `/${res.data.data.id}/check-status`,
+  //         token()
+  //       );
+
+  //       console.log("resStatus", resStatus);
+
+  //       if (resStatus?.data?.data?.item?.status === "FAILED") {
+  //         // notifyError("Payment Failed. Please try again.");
+  //         dispatch(setIsPending(false));
+  //         setLoading(false);
+  //         setIsPaymentFailed(true);
+  //         setMessage("Payment Unsuccessful. Please try again.");
+  //       } else if (resStatus?.data?.data?.item?.status === "SUCCESS ") {
+  //         dispatch(setIsPending(false));
+  //         setLoading(false);
+  //         setIsPaymentFailed(false);
+  //         setMessage(
+  //           "You can now access unlimited errands with your current plan"
+  //         );
+  //       }
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     dispatch(setIsPending(false));
+  //     notifyError("Oops! The request was not found.");
+  //     setMessage(
+  //       "Payment Unsuccessful. An error occurred while processing your payment. You can try again."
+  //     );
+  //     setLoading(false);
+  //     setIsPaymentFailed(true);
+  //   }
+  // };
+
+  _______________
+
+  rcecnt one api call happenignbut not getting id 
+
+  const ErrandiaBooster = ({ setIsOpen, isOpen, plans, setPlans, shopId }) => {
+  const errandiaBooster = useSelector((store) => store?.errandiaBooster?.value);
+  const dispatch = useDispatch();
+  const [activeStep, setActiveStep] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [message, setMessage] = useState("");
+  const [makePlan, setMakePlan] = useState({
+    name: null,
+    unit_price: null,
+    currency: null,
+    period: null,
+  });
+
+  const [subscribe, setSubscribe] = useState({
+    plan_id: null,
+    shop_id: shopId,
+    phone_number: null,
+  });
+
+  const [isPaymentFailed, setIsPaymentFailed] = useState(false);
+  const [paymentStatus, setPaymentStatus] = useState(null);
+  const [paymentId, setPaymentId] = useState(null);
+  console.log("booster paymentId", paymentId);
+  const steps = ["Select Plan", "Confirm Payment"];
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    setMakePlan({
+      name: null,
+      unit_price: null,
+      currency: null,
+      period: null,
+    });
+    setSubscribe({
+      plan_id: null,
+      shop_id: null,
+      phone_number: null,
+    });
+    setIsPaymentFailed(false);
+  };
+
+  const inputStyle = {
+    width: "100%",
+    height: "35px",
+    borderRadius: "10px",
+    border: "1px solid #eceff2",
+    outline: "none",
+  };
+
+  const handleReset = () => {
+    setActiveStep(0);
+    setLoading(false);
+    setMessage("");
+    setIsPaymentFailed(false);
+    setMakePlan({
+      name: null,
+      unit_price: null,
+      currency: null,
+      period: null,
+    });
+    setSubscribe({
+      plan_id: null,
+      shop_id: null,
+      phone_number: null,
+    });
+    dispatch(modalErrandiaBoosterToggle());
+    dispatch(setErrandiaBoosterModalFalse());
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    if (activeStep === steps.length && !loading) {
+      const timer = setTimeout(() => {
+        handleReset();
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [activeStep, loading]);
+
+  const purchasePlan = async () => {
+    if (!subscribe?.phone_number) {
+      notifyError("Phone Number is required for subscription!");
+      return;
+    }
+
+    setIsPaymentFailed(false);
+    setLoading(true); // Start loading
+    handleNext(); // Move to the "Processing Payments" screen
+
+    try {
+      dispatch(setIsPending(true));
+      const res = await postApi(apis.subscribePlan, subscribe, token());
+      console.log("booster postSub", res, res.data.data.id);
+      if (res.data.message === "Payment request done") {
+        setPaymentId(res.data.data.id); // Store the Payment ID
+        setPaymentStatus("PENDING"); // Start polling
+
+        // Polling for payment status
+        const interval = setInterval(async () => {
+          try {
+            const resStatus = await getApi(
+              apis.subscriptionStatus + `/${paymentId}/check-status`,
+              token()
+            );
+
+            const status = resStatus?.data?.data?.item?.status?.trim();
+
+            if (status === "FAILED" || status === "SUCCESS") {
+              clearInterval(interval); // Stop polling
+              dispatch(setIsPending(false));
+              setLoading(false); // Stop loading
+              setPaymentStatus(status);
+
+              if (status === "FAILED") {
+                setIsPaymentFailed(true);
+                setMessage("Payment Unsuccessful. Please try again.");
+              } else {
+                setIsPaymentFailed(false);
+                setMessage(
+                  "You can now access unlimited errands with your current plan."
+                );
+              }
+            }
+          } catch (err) {
+            console.log("Error checking payment status:", err);
+            clearInterval(interval);
+            setIsPaymentFailed(true);
+            setMessage(
+              "Payment Unsuccessful. An error occurred while processing your payment. You can try again."
+            );
+            setLoading(false);
+          }
+        }, 3000); // Poll every 3 seconds
+
+        return () => clearInterval(interval); // Cleanup on unmount
+      }
+    } catch (err) {
+      console.log(err);
+      if (
+        err.response?.data?.message ===
+        "You are already under a subscription plan"
+      ) {
+        notifyError("You are already under a subscription plan");
+        handleReset();
+        return;
+      }
+
+      notifyError("Oops! The request was not found.");
+      dispatch(setIsPending(false));
+      setMessage(
+        "Payment Unsuccessful. An error occurred while processing your payment. You can try again."
+      );
+      setLoading(false);
+      setIsPaymentFailed(true);
+    }
+  };
+
+  const isPendingFromStore = useSelector(
+    (store) => store?.searchProduct?.isPending
+  );
+
+  return (
+    <>
+      <Modal
+        size="lg"
+        show={isOpen}
+        aria-labelledby="example-modal-sizes-title-lg"
+        className="featuredBusinessProfileShare-modal-Container errandiaBooster-modal"
+      >
+        <Modal.Header
+          closeButton
+          className="featureBusinessProfileShare-modal-header errandiaBooster-modal-header"
+          onClick={handleReset}
+        >
+          <Modal.Title
+            id="example-modal-sizes-title-lg"
+            className="featureBusinessProfileShare-heading"
+          >
+            Errandia Booster
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="container p-3">
+            <div className="text-center">
+              <Stepper activeStep={activeStep} alternativeLabel>
+                {steps.map((label, index) => (
+                  <Step key={index}>
+                    <StepLabel></StepLabel>
+                  </Step>
+                ))}
+              </Stepper>
+              {activeStep === steps.length ? (
+                <>
+                  {loading ? (
+                    <>
+                      <div className="mt-5 text-center">
+                        <Loader />
+                        <h2 className="mt-4">Processing Payments</h2>
+                        <p className="mt-2">
+                          A mobile money alert will be sent to you shortly to
+                          confirm your <b>Business Booster Plan</b> subscription
+                          of 5,000 XAF
+                        </p>
+                        <p className="mt-4">
+                          If you have questions or need support, contact us at{" "}
+                          <a href="#">admin@errandia.com</a>
+                        </p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      {isPaymentFailed ? (
+                        <div className="failure-message">
+                          <svg
+                            width="191"
+                            height="191"
+                            viewBox="0 0 191 191"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="0.5"
+                              y="0.5"
+                              width="190"
+                              height="190"
+                              rx="12"
+                              fill="#F1F4FF"
+                            />
+                            <path
+                              d="M147.773 51.4102H44.1367V155.047H147.773V51.4102Z"
+                              fill="#A7AFFF"
+                            />
+                            <path
+                              d="M132 77.5038L133.061 76.4432L132 75.3825L125.057 68.4393L123.996 67.3787L122.936 68.4393L96.4697 94.9052L70.0038 68.4393L68.9432 67.3787L67.8825 68.4393L60.9393 75.3825L59.8787 76.4432L60.9393 77.5038L87.4052 103.97L60.9393 130.436L59.8787 131.496L60.9393 132.557L67.8825 139.5L68.9432 140.561L70.0038 139.5L96.4697 113.034L122.936 139.5L123.996 140.561L125.057 139.5L132 132.557L133.061 131.496L132 130.436L105.534 103.97L132 77.5038Z"
+                              fill="#1006AC"
+                              stroke="#1006AC"
+                              strokeWidth="3"
+                            />
+                          </svg>
+
+                          <h2 className="mt-4">Payment Unsuccessful</h2>
+                          <p className="mt-2">{message}</p>
+                          <div className="mt-4 d-flex justify-content-center gap-4">
+                            <Button
+                              onClick={() => setActiveStep(0)}
+                              className="w-25 header-button-blue"
+                            >
+                              Retry
+                            </Button>
+                            <Button
+                              className="w-25 btn-back"
+                              onClick={handleReset}
+                            >
+                              Close
+                            </Button>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="success-message">
+                          <svg
+                            width="209"
+                            height="210"
+                            viewBox="0 0 209 210"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              y="0.5"
+                              width="209"
+                              height="209"
+                              rx="12"
+                              fill="#F1F4FF"
+                            />
+                            <path
+                              d="M162 56.5H48V170.5H162V56.5Z"
+                              fill="#A7AFFF"
+                            />
+                            <path
+                              d="M143.136 101.554L130.254 89.1435L166.908 51.3398L179.787 63.75L143.136 101.554Z"
+                              fill="#2718FF"
+                            />
+                            <path
+                              d="M162.001 56.5H161.938L88.4551 132.772L101.337 145.183L162.001 82.2165V56.5Z"
+                              fill="#020053"
+                            />
+                            <path
+                              d="M75.2044 95.3453L62.8203 108.254L101.34 145.209L113.725 132.3L75.2044 95.3453Z"
+                              fill="#020053"
+                            />
+                          </svg>
+
+                          <h2 className="mt-4">Payment Successful</h2>
+                          <p className="mt-2">{message}</p>
+                          <Button
+                            variant="contained"
+                            className="w-50 header-button-blue mt-4 text-center"
+                            onClick={handleReset}
+                          >
+                            Okay
+                          </Button>
+                        </div>
+                      )}
+                    </>
+                  )}
+                </>
+              ) : (
+                <div className="mt-4">
+                  {activeStep === 0 && (
+                    <>
+                      <div className="text-center">
+                        <h2 className="mt-4">Buy a Booster</h2>
+                        <p className="mt-2">
+                          Get a plan now and enjoy premium features on Errandia
+                        </p>
+                      </div>
+                      <div className="d-flex gap-4 justify-content-center flex-wrap mt-5">
+                        {isPendingFromStore ? (
+                          <Loader />
+                        ) : (
+                          plans?.map((plan) => (
+                            <Card
+                              className="card-subscription border rounded-lg"
+                              key={plan.id}
+                            >
+                              <p className="popular-sec-errandiaBooster">
+                                Popular
+                              </p>
+                              <CardContent className="p-4">
+                                <h4 className="text-lg font-bold">
+                                  {plan?.name}
+                                </h4>
+                                <h2 className="text-2xl font-bold">{`${plan?.unit_price}${plan?.currency}`}</h2>
+                                <p className="">per month</p>
+                                <p className="time-errandiaBooster">
+                                  Free for {plan?.duration_time} month
+                                </p>
+                                <div className="d-flex mt-4">
+                                  <svg
+                                    width="25"
+                                    height="24"
+                                    viewBox="0 0 25 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      fillRule="evenodd"
+                                      clipRule="evenodd"
+                                      d="M9.50039 16.2016L5.30039 12.0016L3.90039 13.4016L9.50039 19.0016L21.5004 7.00156L20.1004 5.60156L9.50039 16.2016Z"
+                                      fill="#2718FF"
+                                    />
+                                  </svg>
+                                  <p>{plan?.description}</p>
+                                </div>
+
+                                <Button
+                                  variant="contained"
+                                  className="w-full mt-3"
+                                  style={{ backgroundColor: "#171A1F" }}
+                                  onClick={() => {
+                                    handleNext();
+                                    setMakePlan({
+                                      name: plan?.name,
+                                      unit_price: plan?.unit_price,
+                                      currency: plan?.currency,
+                                      period: plan?.period,
+                                    });
+                                    setSubscribe((prev) => ({
+                                      ...prev,
+                                      plan_id: plan?.id,
+                                    }));
+                                  }}
+                                >
+                                  Subscribe now
+                                </Button>
+                              </CardContent>
+                            </Card>
+                          ))
+                        )}
+                      </div>
+                    </>
+                  )}
+                  {activeStep === 1 && (
+                    <div className="text-center">
+                      <div className="text-center">
+                        <h2 className="mt-4">Make Payment</h2>
+                        <p className="mt-2">
+                          how will you like to pay for your subscription
+                        </p>
+                      </div>
+                      <div className="d-flex justify-content-center">
+                        <div className="amount-card-errandia">
+                          <div className="d-flex" style={{ zIndex: "1" }}>
+                            <div className="ms-2" style={{ textAlign: "left" }}>
+                              <p className="text-left">Subscribe to:</p>
+                              <h5>{makePlan?.name}</h5>
+                            </div>
+                          </div>
+                          <div style={{ zIndex: "1" }} className="text-end">
+                            <h5>{`${makePlan?.unit_price}${makePlan?.currency}`}</h5>
+                            <p>per {makePlan?.period}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="d-flex justify-content-center">
+                        <div className="phone-input-sub">
+                          <Form.Group className="" controlId="formBasicEmail">
+                            <Form.Label className="runErrandPopUpSignUpFormTab-form-input-heading">
+                              Phone Number *
+                            </Form.Label>
+                            <PhoneInput
+                              country="cm"
+                              inputStyle={inputStyle}
+                              onlyCountries={["cm"]}
+                              value={subscribe?.phone_number}
+                              onChange={(e) => {
+                                setSubscribe((prev) => ({
+                                  ...prev,
+                                  phone_number: `+${e}`,
+                                }));
+                              }}
+                            />
+                          </Form.Group>
+                        </div>
+                      </div>
+                      <div className="mt-4 d-flex justify-content-center gap-4">
+                        <Button
+                          onClick={handleBack}
+                          className="w-full btn-back-erra"
+                        >
+                          <svg
+                            width="17"
+                            height="17"
+                            viewBox="0 0 17 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M5.71602 9.16797L9.44935 12.9013L8.49935 13.8346L3.16602 8.5013L8.49935 3.16797L9.44935 4.1013L5.71602 7.83464H13.8327V9.16797H5.71602Z"
+                              fill="#171A1F"
+                            />
+                          </svg>
+                          Go Back
+                        </Button>
+                        <Button
+                          variant="contained"
+                          className="w-full"
+                          style={{ backgroundColor: "#171A1F" }}
+                          onClick={purchasePlan}
+                        >
+                          Pay and Subscribe
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
+    </>
+  );
+};
+
+export default ErrandiaBooster;
+-------------------------------------------
+
+// const ErrandiaBooster = ({ setIsOpen, isOpen, plans, setPlans, shopId }) => {
+//   const errandiaBooster = useSelector((store) => store?.errandiaBooster?.value);
+//   const dispatch = useDispatch();
+//   const [activeStep, setActiveStep] = useState(0);
+//   const [loading, setLoading] = useState(true);
+//   const [message, setMessage] = useState("");
+//   const [makePlan, setMakePlan] = useState({
+//     name: null,
+//     unit_price: null,
+//     currency: null,
+//     period: null,
+//   });
+
+//   const [subscribe, setSubscribe] = useState({
+//     plan_id: null,
+//     shop_id: shopId,
+//     phone_number: null,
+//   });
+
+//   const [isPaymentFailed, setIsPaymentFailed] = useState(false);
+//   const [paymentStatus, setPaymentStatus] = useState(null);
+//   const [paymentId, setPaymentId] = useState(null);
+//   console.log("booster paymentId", paymentId);
+//   const steps = ["Select Plan", "Confirm Payment"];
+
+//   const handleNext = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+//   };
+
+//   const handleBack = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+//     setMakePlan({
+//       name: null,
+//       unit_price: null,
+//       currency: null,
+//       period: null,
+//     });
+//     setSubscribe({
+//       plan_id: null,
+//       shop_id: null,
+//       phone_number: null,
+//     });
+//     setIsPaymentFailed(false);
+//   };
+
+//   const inputStyle = {
+//     width: "100%",
+//     height: "35px",
+//     borderRadius: "10px",
+//     border: "1px solid #eceff2",
+//     outline: "none",
+//   };
+
+//   const handleReset = () => {
+//     setActiveStep(0);
+//     setLoading(false);
+//     setMessage("");
+//     setIsPaymentFailed(false);
+//     setMakePlan({
+//       name: null,
+//       unit_price: null,
+//       currency: null,
+//       period: null,
+//     });
+//     setSubscribe({
+//       plan_id: null,
+//       shop_id: null,
+//       phone_number: null,
+//     });
+//     dispatch(modalErrandiaBoosterToggle());
+//     dispatch(setErrandiaBoosterModalFalse());
+//     setIsOpen(false);
+//   };
+
+//   useEffect(() => {
+//     if (activeStep === steps.length && !loading) {
+//       const timer = setTimeout(() => {
+//         // handleReset();
+//       }, 3000);
+
+//       return () => clearTimeout(timer);
+//     }
+//   }, [activeStep, loading]);
+
+//   const purchasePlan = async () => {
+//     if (!subscribe?.phone_number) {
+//       notifyError("Phone Number is required for subscription!");
+//       return;
+//     }
+
+//     setIsPaymentFailed(false);
+//     setLoading(true); // Start loading
+//     handleNext(); // Move to the "Processing Payments" screen
+
+//     try {
+//       dispatch(setIsPending(true));
+//       const res = await postApi(apis.subscribePlan, subscribe, token());
+//       dispatch(setIsPending(false));
+
+//       console.log("booster postSub", res, res.data.data.id);
+//       if (res.data.message === "Payment request done") {
+//         setPaymentId(res.data.data.id); // Store the Payment ID
+//         setPaymentStatus("PENDING"); // Start polling
+//       }
+//     } catch (err) {
+//       console.log(err);
+//       if (
+//         err.response?.data?.message ===
+//         "You are already under a subscription plan"
+//       ) {
+//         notifyError("You are already under a subscription plan");
+//         setActiveStep(0);
+//         setLoading(false);
+//         setMakePlan({ name: null, unit_price: null, currency: null });
+//         setSubscribe({ plan_id: null, phone_number: null });
+//         // dispatch(modalSubscriptionToggle());
+//         dispatch(modalErrandiaBoosterToggle());
+//         dispatch(setErrandiaBoosterModalFalse());
+//         // dispatch(setSubscriptionModalFalse());
+
+//         return;
+//       }
+
+//       notifyError("Oops! The request was not found.");
+//       dispatch(setIsPending(false));
+//       setMessage(
+//         "Payment Unsuccessful. An error occurred while processing your payment. You can try again."
+//       );
+//       setLoading(false);
+//       setIsPaymentFailed(true);
+//     }
+//   };
+
+//   // useEffect(() => {
+//   //   if (paymentStatus !== "PENDING" || !paymentId) return; // Only run if status is pending
+
+//   //   const interval = setInterval(async () => {
+//   //     try {
+//   //       const resStatus = await getApi(
+//   //         apis.subscriptionStatus + `/${paymentId}/check-status`,
+//   //         token()
+//   //       );
+
+//   //       const status = resStatus?.data?.data?.item?.status?.trim(); // Trim to avoid space issues
+//   //       console.log("Polling status:", status);
+
+//   //       if (status === "FAILED" || status === "SUCCESS") {
+//   //         clearInterval(interval);
+//   //         dispatch(setIsPending(false));
+//   //         setLoading(false);
+//   //         setPaymentStatus(status);
+
+//   //         if (status === "FAILED") {
+//   //           setIsPaymentFailed(true);
+//   //           setMessage("Payment Unsuccessful. Please try again.");
+//   //         } else {
+//   //           setIsPaymentFailed(false);
+//   //           setMessage(
+//   //             "You can now access unlimited errands with your current plan"
+//   //           );
+//   //         }
+//   //       } else {
+//   //         dispatch(setIsPending(true)); // Keep loader active while status is PENDING
+//   //       }
+//   //     } catch (err) {
+//   //       console.log("Error checking payment status:", err);
+//   //       clearInterval(interval);
+//   //       setIsPaymentFailed(true);
+//   //       setMessage(
+//   //         "Payment Unsuccessful. An error occurred while processing your payment. You can try again."
+//   //       );
+//   //       setLoading(false);
+//   //     }
+//   //   }, 10000); // Poll every 3 seconds
+
+//   //   return () => clearInterval(interval); // Cleanup on unmount
+//   // }, [paymentStatus, paymentId]);
+
+//   const isPendingFromStore = useSelector(
+//     (store) => store?.searchProduct?.isPending
+//   );
+
+//   return (
+//     <>
+//       <Modal
+//         size="lg"
+//         show={isOpen}
+//         aria-labelledby="example-modal-sizes-title-lg"
+//         className="featuredBusinessProfileShare-modal-Container errandiaBooster-modal"
+//       >
+//         <Modal.Header
+//           closeButton
+//           className="featureBusinessProfileShare-modal-header errandiaBooster-modal-header"
+//           onClick={handleReset}
+//         >
+//           <Modal.Title
+//             id="example-modal-sizes-title-lg"
+//             className="featureBusinessProfileShare-heading"
+//           >
+//             Errandia Booster
+//           </Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>
+//           <div className="container p-3">
+//             <div className="text-center">
+//               <Stepper activeStep={activeStep} alternativeLabel>
+//                 {steps.map((label, index) => (
+//                   <Step key={index}>
+//                     <StepLabel></StepLabel>
+//                   </Step>
+//                 ))}
+//               </Stepper>
+//               {activeStep === steps.length ? (
+//                 <>
+//                   {loading ? (
+//                     <>
+//                       <div className="mt-5 text-center">
+//                         <Loader />
+//                         <h2 className="mt-4">Processing Payments</h2>
+//                         <p className="mt-2">
+//                           A mobile money alert will be sent to you shortly to
+//                           confirm your <b>Business Booster Plan</b> subscription
+//                           of 5,000 XAF
+//                         </p>
+//                         <p className="mt-4">
+//                           If you have questions or need support, contact us at{" "}
+//                           <a href="#">admin@errandia.com</a>
+//                         </p>
+//                       </div>
+//                     </>
+//                   ) : (
+//                     <>
+//                       {isPaymentFailed ? (
+//                         <div className="failure-message">
+//                           <svg
+//                             width="191"
+//                             height="191"
+//                             viewBox="0 0 191 191"
+//                             fill="none"
+//                             xmlns="http://www.w3.org/2000/svg"
+//                           >
+//                             <rect
+//                               x="0.5"
+//                               y="0.5"
+//                               width="190"
+//                               height="190"
+//                               rx="12"
+//                               fill="#F1F4FF"
+//                             />
+//                             <path
+//                               d="M147.773 51.4102H44.1367V155.047H147.773V51.4102Z"
+//                               fill="#A7AFFF"
+//                             />
+//                             <path
+//                               d="M132 77.5038L133.061 76.4432L132 75.3825L125.057 68.4393L123.996 67.3787L122.936 68.4393L96.4697 94.9052L70.0038 68.4393L68.9432 67.3787L67.8825 68.4393L60.9393 75.3825L59.8787 76.4432L60.9393 77.5038L87.4052 103.97L60.9393 130.436L59.8787 131.496L60.9393 132.557L67.8825 139.5L68.9432 140.561L70.0038 139.5L96.4697 113.034L122.936 139.5L123.996 140.561L125.057 139.5L132 132.557L133.061 131.496L132 130.436L105.534 103.97L132 77.5038Z"
+//                               fill="#1006AC"
+//                               stroke="#1006AC"
+//                               strokeWidth="3"
+//                             />
+//                           </svg>
+
+//                           <h2 className="mt-4">Payment Unsuccessful</h2>
+//                           <p className="mt-2">{message}</p>
+//                           <div className="mt-4 d-flex justify-content-center gap-4">
+//                             <Button
+//                               onClick={() => setActiveStep(0)}
+//                               className="w-25 header-button-blue"
+//                             >
+//                               Retry
+//                             </Button>
+//                             <Button
+//                               className="w-25 btn-back"
+//                               onClick={handleReset}
+//                             >
+//                               Close
+//                             </Button>
+//                           </div>
+//                         </div>
+//                       ) : (
+//                         <div className="success-message">
+//                           <svg
+//                             width="209"
+//                             height="210"
+//                             viewBox="0 0 209 210"
+//                             fill="none"
+//                             xmlns="http://www.w3.org/2000/svg"
+//                           >
+//                             <rect
+//                               y="0.5"
+//                               width="209"
+//                               height="209"
+//                               rx="12"
+//                               fill="#F1F4FF"
+//                             />
+//                             <path
+//                               d="M162 56.5H48V170.5H162V56.5Z"
+//                               fill="#A7AFFF"
+//                             />
+//                             <path
+//                               d="M143.136 101.554L130.254 89.1435L166.908 51.3398L179.787 63.75L143.136 101.554Z"
+//                               fill="#2718FF"
+//                             />
+//                             <path
+//                               d="M162.001 56.5H161.938L88.4551 132.772L101.337 145.183L162.001 82.2165V56.5Z"
+//                               fill="#020053"
+//                             />
+//                             <path
+//                               d="M75.2044 95.3453L62.8203 108.254L101.34 145.209L113.725 132.3L75.2044 95.3453Z"
+//                               fill="#020053"
+//                             />
+//                           </svg>
+
+//                           <h2 className="mt-4">Payment Successful</h2>
+//                           <p className="mt-2">{message}</p>
+//                           <Button
+//                             variant="contained"
+//                             className="w-50 header-button-blue mt-4 text-center"
+//                             onClick={handleReset}
+//                           >
+//                             Okay
+//                           </Button>
+//                         </div>
+//                       )}
+//                     </>
+//                   )}
+//                 </>
+//               ) : (
+//                 <div className="mt-4">
+//                   {activeStep === 0 && (
+//                     <>
+//                       <div className="text-center">
+//                         <h2 className="mt-4">Buy a Booster</h2>
+//                         <p className="mt-2">
+//                           Get a plan now and enjoy premium features on Errandia
+//                         </p>
+//                       </div>
+//                       <div className="d-flex gap-4 justify-content-center flex-wrap mt-5">
+//                         {isPendingFromStore ? (
+//                           <Loader />
+//                         ) : (
+//                           plans?.map((plan) => (
+//                             <Card
+//                               className="card-subscription border rounded-lg"
+//                               key={plan.id}
+//                             >
+//                               <p className="popular-sec-errandiaBooster">
+//                                 Popular
+//                               </p>
+//                               <CardContent className="p-4">
+//                                 <h4 className="text-lg font-bold">
+//                                   {plan?.name}
+//                                 </h4>
+//                                 <h2 className="text-2xl font-bold">{`${plan?.unit_price}${plan?.currency}`}</h2>
+//                                 <p className="">per month</p>
+//                                 <p className="time-errandiaBooster">
+//                                   Free for {plan?.duration_time} month
+//                                 </p>
+//                                 <div className="d-flex mt-4">
+//                                   <svg
+//                                     width="25"
+//                                     height="24"
+//                                     viewBox="0 0 25 24"
+//                                     fill="none"
+//                                     xmlns="http://www.w3.org/2000/svg"
+//                                   >
+//                                     <path
+//                                       fillRule="evenodd"
+//                                       clipRule="evenodd"
+//                                       d="M9.50039 16.2016L5.30039 12.0016L3.90039 13.4016L9.50039 19.0016L21.5004 7.00156L20.1004 5.60156L9.50039 16.2016Z"
+//                                       fill="#2718FF"
+//                                     />
+//                                   </svg>
+//                                   <p>{plan?.description}</p>
+//                                 </div>
+
+//                                 <Button
+//                                   variant="contained"
+//                                   className="w-full mt-3"
+//                                   style={{ backgroundColor: "#171A1F" }}
+//                                   onClick={() => {
+//                                     handleNext();
+//                                     setMakePlan({
+//                                       name: plan?.name,
+//                                       unit_price: plan?.unit_price,
+//                                       currency: plan?.currency,
+//                                       period: plan?.period,
+//                                     });
+//                                     setSubscribe((prev) => ({
+//                                       ...prev,
+//                                       plan_id: plan?.id,
+//                                     }));
+//                                   }}
+//                                 >
+//                                   Subscribe now
+//                                 </Button>
+//                               </CardContent>
+//                             </Card>
+//                           ))
+//                         )}
+//                       </div>
+//                     </>
+//                   )}
+//                   {activeStep === 1 && (
+//                     <div className="text-center">
+//                       <div className="text-center">
+//                         <h2 className="mt-4">Make Payment</h2>
+//                         <p className="mt-2">
+//                           how will you like to pay for your subscription
+//                         </p>
+//                       </div>
+//                       <div className="d-flex justify-content-center">
+//                         <div className="amount-card-errandia">
+//                           <div className="d-flex" style={{ zIndex: "1" }}>
+//                             <div className="ms-2" style={{ textAlign: "left" }}>
+//                               <p className="text-left">Subscribe to:</p>
+//                               <h5>{makePlan?.name}</h5>
+//                             </div>
+//                           </div>
+//                           <div style={{ zIndex: "1" }} className="text-end">
+//                             <h5>{`${makePlan?.unit_price}${makePlan?.currency}`}</h5>
+//                             <p>per {makePlan?.period}</p>
+//                           </div>
+//                         </div>
+//                       </div>
+//                       <div className="d-flex justify-content-center">
+//                         <div className="phone-input-sub">
+//                           <Form.Group className="" controlId="formBasicEmail">
+//                             <Form.Label className="runErrandPopUpSignUpFormTab-form-input-heading">
+//                               Phone Number *
+//                             </Form.Label>
+//                             <PhoneInput
+//                               country="cm"
+//                               inputStyle={inputStyle}
+//                               onlyCountries={["cm"]}
+//                               value={subscribe?.phone_number}
+//                               onChange={(e) => {
+//                                 setSubscribe((prev) => {
+//                                   return {
+//                                     ...prev,
+//                                     phone_number: `+${e}`,
+//                                   };
+//                                 });
+//                               }}
+//                             />
+//                           </Form.Group>
+//                         </div>
+//                       </div>
+//                       <div className="mt-4 d-flex justify-content-center gap-4">
+//                         <Button
+//                           onClick={handleBack}
+//                           className="w-full btn-back-erra"
+//                         >
+//                           <svg
+//                             width="17"
+//                             height="17"
+//                             viewBox="0 0 17 17"
+//                             fill="none"
+//                             xmlns="http://www.w3.org/2000/svg"
+//                           >
+//                             <path
+//                               d="M5.71602 9.16797L9.44935 12.9013L8.49935 13.8346L3.16602 8.5013L8.49935 3.16797L9.44935 4.1013L5.71602 7.83464H13.8327V9.16797H5.71602Z"
+//                               fill="#171A1F"
+//                             />
+//                           </svg>
+//                           Go Back
+//                         </Button>
+//                         <Button
+//                           variant="contained"
+//                           className="w-full"
+//                           style={{ backgroundColor: "#171A1F" }}
+//                           onClick={purchasePlan}
+//                         >
+//                           Pay and Subscribe
+//                         </Button>
+//                       </div>
+//                     </div>
+//                   )}
+//                 </div>
+//               )}
+//             </div>
+//           </div>
+//         </Modal.Body>
+//       </Modal>
+//     </>
+//   );
+// };
+
+// export default ErrandiaBooster;
+
+// WORKING FINE
+// const ErrandiaBooster = ({
+//   setIsOpen,
+//   isOpen,
+//   plans,
+//   setPlans,
+//   shopId,
+//   paymentId, // Receive paymentId as prop
+//   setPaymentId, // Receive setPaymentId as prop
+//   paymentStatus, // Receive paymentStatus as prop
+//   setPaymentStatus, // Receive setPaymentStatus as prop
+// }) => {
+//   const dispatch = useDispatch();
+//   const [activeStep, setActiveStep] = useState(0);
+//   const [loading, setLoading] = useState(false);
+//   const [message, setMessage] = useState("");
+//   const [makePlan, setMakePlan] = useState({
+//     name: null,
+//     unit_price: null,
+//     currency: null,
+//     period: null,
+//   });
+
+//   console.log("paymentStatus booster", paymentStatus);
+
+//   const [subscribe, setSubscribe] = useState({
+//     plan_id: null,
+//     shop_id: shopId,
+//     phone_number: null,
+//   });
+
+//   const [isPaymentFailed, setIsPaymentFailed] = useState(false);
+
+//   const steps = ["Select Plan", "Confirm Payment"];
+
+//   const handleNext = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+//   };
+//   console.log("checking BOOSTER", makePlan, subscribe);
+
+//   const handleBack = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+//     setMakePlan({
+//       name: null,
+//       unit_price: null,
+//       currency: null,
+//       period: null,
+//     });
+//     setSubscribe({
+//       plan_id: null,
+//       shop_id: null,
+//       phone_number: null,
+//     });
+//     setIsPaymentFailed(false);
+//   };
+
+//   const inputStyle = {
+//     width: "100%",
+//     height: "35px",
+//     borderRadius: "10px",
+//     border: "1px solid #eceff2",
+//     outline: "none",
+//   };
+//   const handleReset = () => {
+//     setActiveStep(0);
+//     setLoading(false);
+//     setMessage("");
+//     setIsPaymentFailed(false);
+//     setMakePlan({
+//       name: null,
+//       unit_price: null,
+//       currency: null,
+//       period: null,
+//     });
+//     setSubscribe({
+//       plan_id: null,
+//       shop_id: null,
+//       phone_number: null,
+//     });
+//     dispatch(modalErrandiaBoosterToggle());
+//     dispatch(setErrandiaBoosterModalFalse());
+//     setIsOpen(false);
+//   };
+
+//   const purchasePlan = async () => {
+//     if (!subscribe?.phone_number) {
+//       notifyError("Phone Number is required for subscription!");
+//       return;
+//     }
+
+//     setIsPaymentFailed(false);
+//     setLoading(true);
+//     handleNext();
+
+//     try {
+//       // dispatch(setIsPending(true));
+//       const res = await postApi(apis.subscribePlan, subscribe, token());
+//       console.log("purchase button == only api call", res);
+//       if (res.data.message === "Payment request done") {
+//         setPaymentId(res.data.data.id); // Set paymentId in parent component
+//         setPaymentStatus("PENDING"); // Set paymentStatus in parent component
+//       }
+//     } catch (err) {
+//       console.log(err);
+//       if (
+//         err.response?.data?.message ===
+//         "You are already under a subscription plan"
+//       ) {
+//         notifyError("You are already under a subscription plan");
+//         handleReset();
+//         return;
+//       }
+
+//       notifyError("Oops! The request was not found.");
+//       dispatch(setIsPending(false));
+//       setMessage(
+//         "Payment Unsuccessful. An error occurred while processing your payment."
+//       );
+//       setLoading(false);
+//       setIsPaymentFailed(true);
+//     }
+//     console.log("purchase button");
+//   };
+//   const isPendingFromStore = useSelector(
+//     (store) => store?.searchProduct?.isPending
+//   );
+
+//   return (
+//     <>
+//       <Modal
+//         size="lg"
+//         show={isOpen}
+//         aria-labelledby="example-modal-sizes-title-lg"
+//         className="featuredBusinessProfileShare-modal-Container errandiaBooster-modal"
+//       >
+//         <Modal.Header
+//           closeButton
+//           className="featureBusinessProfileShare-modal-header errandiaBooster-modal-header"
+//           onClick={handleReset}
+//         >
+//           <Modal.Title
+//             id="example-modal-sizes-title-lg"
+//             className="featureBusinessProfileShare-heading"
+//           >
+//             Errandia Booster
+//           </Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>
+//           <div className="container p-3">
+//             <div className="text-center">
+//               <Stepper activeStep={activeStep} alternativeLabel>
+//                 {steps.map((label, index) => (
+//                   <Step key={index}>
+//                     <StepLabel></StepLabel>
+//                   </Step>
+//                 ))}
+//               </Stepper>
+//               {activeStep === steps.length ? (
+//                 <>
+//                   {loading ? (
+//                     <>
+//                       <div className="mt-5 text-center">
+//                         <Loader />
+//                         <h2 className="mt-4">Processing Payments</h2>
+//                         <p className="mt-2">
+//                           A mobile money alert will be sent to you shortly to
+//                           confirm your <b>Business Booster Plan</b> subscription
+//                           of 5,000 XAF
+//                         </p>
+//                         <p className="mt-4">
+//                           If you have questions or need support, contact us at{" "}
+//                           <a href="#">admin@errandia.com</a>
+//                         </p>
+//                       </div>
+//                     </>
+//                   ) : (
+//                     <>
+//                       {paymentStatus === "FAILED" ? (
+//                         <div className="failure-message">
+//                           <svg
+//                             width="191"
+//                             height="191"
+//                             viewBox="0 0 191 191"
+//                             fill="none"
+//                             xmlns="http://www.w3.org/2000/svg"
+//                           >
+//                             <rect
+//                               x="0.5"
+//                               y="0.5"
+//                               width="190"
+//                               height="190"
+//                               rx="12"
+//                               fill="#F1F4FF"
+//                             />
+//                             <path
+//                               d="M147.773 51.4102H44.1367V155.047H147.773V51.4102Z"
+//                               fill="#A7AFFF"
+//                             />
+//                             <path
+//                               d="M132 77.5038L133.061 76.4432L132 75.3825L125.057 68.4393L123.996 67.3787L122.936 68.4393L96.4697 94.9052L70.0038 68.4393L68.9432 67.3787L67.8825 68.4393L60.9393 75.3825L59.8787 76.4432L60.9393 77.5038L87.4052 103.97L60.9393 130.436L59.8787 131.496L60.9393 132.557L67.8825 139.5L68.9432 140.561L70.0038 139.5L96.4697 113.034L122.936 139.5L123.996 140.561L125.057 139.5L132 132.557L133.061 131.496L132 130.436L105.534 103.97L132 77.5038Z"
+//                               fill="#1006AC"
+//                               stroke="#1006AC"
+//                               strokeWidth="3"
+//                             />
+//                           </svg>
+
+//                           <h2 className="mt-4">Payment Unsuccessful</h2>
+//                           <p className="mt-2">{message}</p>
+//                           <div className="mt-4 d-flex justify-content-center gap-4">
+//                             <Button
+//                               onClick={() => setActiveStep(0)}
+//                               className="w-25 header-button-blue"
+//                             >
+//                               Retry
+//                             </Button>
+//                             <Button
+//                               className="w-25 btn-back"
+//                               onClick={handleReset}
+//                             >
+//                               Close
+//                             </Button>
+//                           </div>
+//                         </div>
+//                       ) : (
+//                         <div className="success-message">
+//                           <svg
+//                             width="209"
+//                             height="210"
+//                             viewBox="0 0 209 210"
+//                             fill="none"
+//                             xmlns="http://www.w3.org/2000/svg"
+//                           >
+//                             <rect
+//                               y="0.5"
+//                               width="209"
+//                               height="209"
+//                               rx="12"
+//                               fill="#F1F4FF"
+//                             />
+//                             <path
+//                               d="M162 56.5H48V170.5H162V56.5Z"
+//                               fill="#A7AFFF"
+//                             />
+//                             <path
+//                               d="M143.136 101.554L130.254 89.1435L166.908 51.3398L179.787 63.75L143.136 101.554Z"
+//                               fill="#2718FF"
+//                             />
+//                             <path
+//                               d="M162.001 56.5H161.938L88.4551 132.772L101.337 145.183L162.001 82.2165V56.5Z"
+//                               fill="#020053"
+//                             />
+//                             <path
+//                               d="M75.2044 95.3453L62.8203 108.254L101.34 145.209L113.725 132.3L75.2044 95.3453Z"
+//                               fill="#020053"
+//                             />
+//                           </svg>
+
+//                           <h2 className="mt-4">Payment Successful</h2>
+//                           <p className="mt-2">{message}</p>
+//                           <Button
+//                             variant="contained"
+//                             className="w-50 header-button-blue mt-4 text-center"
+//                             onClick={handleReset}
+//                           >
+//                             Okay
+//                           </Button>
+//                         </div>
+//                       )}
+//                     </>
+//                   )}
+//                 </>
+//               ) : (
+//                 <div className="mt-4">
+//                   {activeStep === 0 && (
+//                     <>
+//                       <div className="text-center">
+//                         <h2 className="mt-4">Buy a Booster</h2>
+//                         <p className="mt-2">
+//                           Get a plan now and enjoy premium features on Errandia
+//                         </p>
+//                       </div>
+//                       <div className="d-flex gap-4 justify-content-center flex-wrap mt-5">
+//                         {isPendingFromStore ? (
+//                           <Loader />
+//                         ) : (
+//                           plans?.map((plan) => (
+//                             <Card
+//                               className="card-subscription border rounded-lg"
+//                               key={plan.id}
+//                             >
+//                               <p className="popular-sec-errandiaBooster">
+//                                 Popular
+//                               </p>
+//                               <CardContent className="p-4">
+//                                 <h4 className="text-lg font-bold">
+//                                   {plan?.name}
+//                                 </h4>
+//                                 <h2 className="text-2xl font-bold">{`${plan?.unit_price}${plan?.currency}`}</h2>
+//                                 <p className="">per month</p>
+//                                 <p className="time-errandiaBooster">
+//                                   Free for {plan?.duration_time} month
+//                                 </p>
+//                                 <div className="d-flex mt-4">
+//                                   <svg
+//                                     width="25"
+//                                     height="24"
+//                                     viewBox="0 0 25 24"
+//                                     fill="none"
+//                                     xmlns="http://www.w3.org/2000/svg"
+//                                   >
+//                                     <path
+//                                       fillRule="evenodd"
+//                                       clipRule="evenodd"
+//                                       d="M9.50039 16.2016L5.30039 12.0016L3.90039 13.4016L9.50039 19.0016L21.5004 7.00156L20.1004 5.60156L9.50039 16.2016Z"
+//                                       fill="#2718FF"
+//                                     />
+//                                   </svg>
+//                                   <p>{plan?.description}</p>
+//                                 </div>
+
+//                                 <Button
+//                                   variant="contained"
+//                                   className="w-full mt-3"
+//                                   style={{ backgroundColor: "#171A1F" }}
+//                                   onClick={() => {
+//                                     handleNext();
+//                                     setMakePlan({
+//                                       name: plan?.name,
+//                                       unit_price: plan?.unit_price,
+//                                       currency: plan?.currency,
+//                                       period: plan?.period,
+//                                     });
+//                                     setSubscribe((prev) => ({
+//                                       ...prev,
+//                                       plan_id: plan?.id,
+//                                     }));
+//                                   }}
+//                                 >
+//                                   Subscribe now
+//                                 </Button>
+//                               </CardContent>
+//                             </Card>
+//                           ))
+//                         )}
+//                       </div>
+//                     </>
+//                   )}
+//                   {activeStep === 1 && (
+//                     <div className="text-center">
+//                       <div className="text-center">
+//                         <h2 className="mt-4">Make Payment</h2>
+//                         <p className="mt-2">
+//                           how will you like to pay for your subscription
+//                         </p>
+//                       </div>
+//                       <div className="d-flex justify-content-center">
+//                         <div className="amount-card-errandia">
+//                           <div className="d-flex" style={{ zIndex: "1" }}>
+//                             <div className="ms-2" style={{ textAlign: "left" }}>
+//                               <p className="text-left">Subscribe to:</p>
+//                               <h5>{makePlan?.name}</h5>
+//                             </div>
+//                           </div>
+//                           <div style={{ zIndex: "1" }} className="text-end">
+//                             <h5>{`${makePlan?.unit_price}${makePlan?.currency}`}</h5>
+//                             <p>per {makePlan?.period}</p>
+//                           </div>
+//                         </div>
+//                       </div>
+//                       <div className="d-flex justify-content-center">
+//                         <div className="phone-input-sub">
+//                           <Form.Group className="" controlId="formBasicEmail">
+//                             <Form.Label className="runErrandPopUpSignUpFormTab-form-input-heading">
+//                               Phone Number *
+//                             </Form.Label>
+//                             <PhoneInput
+//                               country="cm"
+//                               inputStyle={inputStyle}
+//                               onlyCountries={["cm"]}
+//                               value={subscribe?.phone_number}
+//                               onChange={(e) => {
+//                                 setSubscribe((prev) => ({
+//                                   ...prev,
+//                                   phone_number: `+${e}`,
+//                                 }));
+//                               }}
+//                             />
+//                           </Form.Group>
+//                         </div>
+//                       </div>
+//                       <div className="mt-4 d-flex justify-content-center gap-4">
+//                         <Button
+//                           onClick={handleBack}
+//                           className="w-full btn-back-erra"
+//                         >
+//                           <svg
+//                             width="17"
+//                             height="17"
+//                             viewBox="0 0 17 17"
+//                             fill="none"
+//                             xmlns="http://www.w3.org/2000/svg"
+//                           >
+//                             <path
+//                               d="M5.71602 9.16797L9.44935 12.9013L8.49935 13.8346L3.16602 8.5013L8.49935 3.16797L9.44935 4.1013L5.71602 7.83464H13.8327V9.16797H5.71602Z"
+//                               fill="#171A1F"
+//                             />
+//                           </svg>
+//                           Go Back
+//                         </Button>
+//                         <Button
+//                           variant="contained"
+//                           className="w-full"
+//                           style={{ backgroundColor: "#171A1F" }}
+//                           onClick={purchasePlan}
+//                         >
+//                           Pay and Subscribe
+//                         </Button>
+//                       </div>
+//                     </div>
+//                   )}
+//                 </div>
+//               )}
+//             </div>
+//           </div>
+//         </Modal.Body>
+//       </Modal>
+//     </>
+//   );
+// };
+
+// export default ErrandiaBooster;
+
+// working finr latest
+// const ErrandiaBooster = ({
+//   setIsOpen,
+//   isOpen,
+//   plans,
+//   setPlans,
+//   shopId,
+//   paymentId, // Receive paymentId as prop
+//   setPaymentId, // Receive setPaymentId as prop
+//   paymentStatus, // Receive paymentStatus as prop
+//   setPaymentStatus, // Receive setPaymentStatus as prop
+// }) => {
+//   const dispatch = useDispatch();
+//   const [activeStep, setActiveStep] = useState(0);
+//   const [loading, setLoading] = useState(false);
+//   const [message, setMessage] = useState("");
+//   const [makePlan, setMakePlan] = useState({
+//     name: null,
+//     unit_price: null,
+//     currency: null,
+//     period: null,
+//   });
+
+//   const [subscribe, setSubscribe] = useState({
+//     plan_id: null,
+//     shop_id: shopId,
+//     phone_number: null,
+//   });
+
+//   const [isPaymentFailed, setIsPaymentFailed] = useState(false);
+
+//   const steps = ["Select Plan", "Confirm Payment"];
+
+//   const handleNext = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+//   };
+
+//   const handleBack = () => {
+//     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+//     setMakePlan({
+//       name: null,
+//       unit_price: null,
+//       currency: null,
+//       period: null,
+//     });
+//     setSubscribe({
+//       plan_id: null,
+//       shop_id: null,
+//       phone_number: null,
+//     });
+//     setIsPaymentFailed(false);
+//   };
+
+//   const handleReset = () => {
+//     setActiveStep(0);
+//     setLoading(false);
+//     setMessage("");
+//     setIsPaymentFailed(false);
+//     setMakePlan({
+//       name: null,
+//       unit_price: null,
+//       currency: null,
+//       period: null,
+//     });
+//     setSubscribe({
+//       plan_id: null,
+//       shop_id: null,
+//       phone_number: null,
+//     });
+//     dispatch(modalErrandiaBoosterToggle());
+//     dispatch(setErrandiaBoosterModalFalse());
+//     setIsOpen(false);
+//   };
+
+//   const inputStyle = {
+//     width: "100%",
+//     height: "35px",
+//     borderRadius: "10px",
+//     border: "1px solid #eceff2",
+//     outline: "none",
+//   };
+
+//   const purchasePlan = async () => {
+//     if (!subscribe?.phone_number) {
+//       notifyError("Phone Number is required for subscription!");
+//       return;
+//     }
+
+//     setIsPaymentFailed(false);
+//     setLoading(true);
+//     handleNext();
+
+//     try {
+//       const res = await postApi(apis.subscribePlan, subscribe, token());
+//       console.log("purchase button == only api call", res);
+//       if (res.data.message === "Payment request done") {
+//         setPaymentId(res.data.data.id); // Set paymentId in parent component
+//         setPaymentStatus("PENDING"); // Set paymentStatus in parent component
+//       }
+//     } catch (err) {
+//       console.log(err);
+//       if (
+//         err.response?.data?.message ===
+//         "You are already under a subscription plan"
+//       ) {
+//         notifyError("You are already under a subscription plan");
+//         handleReset();
+//         return;
+//       }
+
+//       notifyError("Oops! The request was not found.");
+//       // setMessage(
+//       //   "Payment Unsuccessful. An error occurred while processing your payment."
+//       // );
+//       setLoading(false);
+//       setIsPaymentFailed(true);
+//     }
+//   };
+
+//   const isPendingFromStore = useSelector(
+//     (store) => store?.searchProduct?.isPending
+//   );
+
+//   return (
+//     <>
+//       <Modal
+//         size="lg"
+//         show={isOpen}
+//         aria-labelledby="example-modal-sizes-title-lg"
+//         className="featuredBusinessProfileShare-modal-Container errandiaBooster-modal"
+//       >
+//         <Modal.Header
+//           closeButton
+//           className="featureBusinessProfileShare-modal-header errandiaBooster-modal-header"
+//           onClick={handleReset}
+//         >
+//           <Modal.Title
+//             id="example-modal-sizes-title-lg"
+//             className="featureBusinessProfileShare-heading"
+//           >
+//             Errandia Booster
+//           </Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>
+//           <div className="container p-3">
+//             <div className="text-center">
+//               <Stepper activeStep={activeStep} alternativeLabel>
+//                 {steps.map((label, index) => (
+//                   <Step key={index}>
+//                     <StepLabel></StepLabel>
+//                   </Step>
+//                 ))}
+//               </Stepper>
+//               {activeStep === steps.length ? (
+//                 <>
+//                   {paymentStatus === "PENDING" ? ( // Show loader while payment is processing
+//                     <div className="mt-5 text-center">
+//                       <Loader />
+//                       <h2 className="mt-4">Processing Payments</h2>
+//                       <p className="mt-2">
+//                         A mobile money alert will be sent to you shortly to
+//                         confirm your <b>Business Booster Plan</b> subscription
+//                         of 5,000 XAF
+//                       </p>
+//                       <p className="mt-4">
+//                         If you have questions or need support, contact us at{" "}
+//                         <a href="#">admin@errandia.com</a>
+//                       </p>
+//                     </div>
+//                   ) : paymentStatus === "SUCCESS" ? ( // Show success message
+//                     <div className="success-message">
+//                       <svg
+//                         width="209"
+//                         height="210"
+//                         viewBox="0 0 209 210"
+//                         fill="none"
+//                         xmlns="http://www.w3.org/2000/svg"
+//                       >
+//                         <rect
+//                           y="0.5"
+//                           width="209"
+//                           height="209"
+//                           rx="12"
+//                           fill="#F1F4FF"
+//                         />
+//                         <path d="M162 56.5H48V170.5H162V56.5Z" fill="#A7AFFF" />
+//                         <path
+//                           d="M143.136 101.554L130.254 89.1435L166.908 51.3398L179.787 63.75L143.136 101.554Z"
+//                           fill="#2718FF"
+//                         />
+//                         <path
+//                           d="M162.001 56.5H161.938L88.4551 132.772L101.337 145.183L162.001 82.2165V56.5Z"
+//                           fill="#020053"
+//                         />
+//                         <path
+//                           d="M75.2044 95.3453L62.8203 108.254L101.34 145.209L113.725 132.3L75.2044 95.3453Z"
+//                           fill="#020053"
+//                         />
+//                       </svg>
+
+//                       <h2 className="mt-4">Payment Successful</h2>
+//                       <p className="mt-2">
+//                         You can now access unlimited errands with your current
+//                         plan.
+//                       </p>
+//                       <Button
+//                         variant="contained"
+//                         className="w-50 header-button-blue mt-4 text-center"
+//                         onClick={handleReset}
+//                       >
+//                         Okay
+//                       </Button>
+//                     </div>
+//                   ) : paymentStatus === "FAILED" ? ( // Show failure message
+//                     <div className="failure-message">
+//                       <svg
+//                         width="191"
+//                         height="191"
+//                         viewBox="0 0 191 191"
+//                         fill="none"
+//                         xmlns="http://www.w3.org/2000/svg"
+//                       >
+//                         <rect
+//                           x="0.5"
+//                           y="0.5"
+//                           width="190"
+//                           height="190"
+//                           rx="12"
+//                           fill="#F1F4FF"
+//                         />
+//                         <path
+//                           d="M147.773 51.4102H44.1367V155.047H147.773V51.4102Z"
+//                           fill="#A7AFFF"
+//                         />
+//                         <path
+//                           d="M132 77.5038L133.061 76.4432L132 75.3825L125.057 68.4393L123.996 67.3787L122.936 68.4393L96.4697 94.9052L70.0038 68.4393L68.9432 67.3787L67.8825 68.4393L60.9393 75.3825L59.8787 76.4432L60.9393 77.5038L87.4052 103.97L60.9393 130.436L59.8787 131.496L60.9393 132.557L67.8825 139.5L68.9432 140.561L70.0038 139.5L96.4697 113.034L122.936 139.5L123.996 140.561L125.057 139.5L132 132.557L133.061 131.496L132 130.436L105.534 103.97L132 77.5038Z"
+//                           fill="#1006AC"
+//                           stroke="#1006AC"
+//                           strokeWidth="3"
+//                         />
+//                       </svg>
+
+//                       <h2 className="mt-4">Payment Unsuccessful</h2>
+//                       <p className="mt-2">
+//                         Payment Unsuccessful. Please try again.
+//                       </p>
+//                       <div className="mt-4 d-flex justify-content-center gap-4">
+//                         <Button
+//                           onClick={() => {
+//                             setActiveStep(0);
+//                             setMakePlan({
+//                               name: null,
+//                               unit_price: null,
+//                               currency: null,
+//                               period: null,
+//                             });
+//                             setSubscribe({
+//                               plan_id: null,
+//                               shop_id: null,
+//                               phone_number: null,
+//                             });
+//                           }}
+//                           className="w-25 header-button-blue"
+//                         >
+//                           Retry
+//                         </Button>
+//                         <Button className="w-25 btn-back" onClick={handleReset}>
+//                           Close
+//                         </Button>
+//                       </div>
+//                     </div>
+//                   ) : null}
+//                 </>
+//               ) : (
+//                 <div className="mt-4">
+//                   {activeStep === 0 && (
+//                     <>
+//                       <div className="text-center">
+//                         <h2 className="mt-4">Buy a Booster</h2>
+//                         <p className="mt-2">
+//                           Get a plan now and enjoy premium features on Errandia
+//                         </p>
+//                       </div>
+//                       <div className="d-flex gap-4 justify-content-center flex-wrap mt-5">
+//                         {isPendingFromStore ? (
+//                           <Loader />
+//                         ) : (
+//                           plans?.map((plan) => (
+//                             <Card
+//                               className="card-subscription border rounded-lg"
+//                               key={plan.id}
+//                             >
+//                               <p className="popular-sec-errandiaBooster">
+//                                 Popular
+//                               </p>
+//                               <CardContent className="p-4">
+//                                 <h4 className="text-lg font-bold">
+//                                   {plan?.name}
+//                                 </h4>
+//                                 <h2 className="text-2xl font-bold">{`${plan?.unit_price}${plan?.currency}`}</h2>
+//                                 <p className="">per month</p>
+//                                 <p className="time-errandiaBooster">
+//                                   Free for {plan?.duration_time} month
+//                                 </p>
+//                                 <div className="d-flex mt-4">
+//                                   <svg
+//                                     width="25"
+//                                     height="24"
+//                                     viewBox="0 0 25 24"
+//                                     fill="none"
+//                                     xmlns="http://www.w3.org/2000/svg"
+//                                   >
+//                                     <path
+//                                       fillRule="evenodd"
+//                                       clipRule="evenodd"
+//                                       d="M9.50039 16.2016L5.30039 12.0016L3.90039 13.4016L9.50039 19.0016L21.5004 7.00156L20.1004 5.60156L9.50039 16.2016Z"
+//                                       fill="#2718FF"
+//                                     />
+//                                   </svg>
+//                                   <p>{parse(plan?.description)}</p>
+//                                 </div>
+
+//                                 <Button
+//                                   variant="contained"
+//                                   className="w-full mt-3"
+//                                   style={{ backgroundColor: "#171A1F" }}
+//                                   onClick={() => {
+//                                     handleNext();
+//                                     setMakePlan({
+//                                       name: plan?.name,
+//                                       unit_price: plan?.unit_price,
+//                                       currency: plan?.currency,
+//                                       period: plan?.period,
+//                                     });
+//                                     setSubscribe((prev) => ({
+//                                       ...prev,
+//                                       plan_id: plan?.id,
+//                                     }));
+//                                   }}
+//                                 >
+//                                   Subscribe now
+//                                 </Button>
+//                               </CardContent>
+//                             </Card>
+//                           ))
+//                         )}
+//                       </div>
+//                     </>
+//                   )}
+//                   {activeStep === 1 && (
+//                     <div className="text-center">
+//                       <div className="text-center">
+//                         <h2 className="mt-4">Make Payment</h2>
+//                         <p className="mt-2">
+//                           how will you like to pay for your subscription
+//                         </p>
+//                       </div>
+//                       <div className="d-flex justify-content-center">
+//                         <div className="amount-card-errandia">
+//                           <div className="d-flex" style={{ zIndex: "1" }}>
+//                             <div className="ms-2" style={{ textAlign: "left" }}>
+//                               <p className="text-left">Subscribe to:</p>
+//                               <h5>{makePlan?.name}</h5>
+//                             </div>
+//                           </div>
+//                           <div style={{ zIndex: "1" }} className="text-end">
+//                             <h5>{`${makePlan?.unit_price}${makePlan?.currency}`}</h5>
+//                             <p>per {makePlan?.period}</p>
+//                           </div>
+//                         </div>
+//                       </div>
+//                       <div className="d-flex justify-content-center">
+//                         <div className="phone-input-sub">
+//                           <Form.Group className="" controlId="formBasicEmail">
+//                             <Form.Label className="runErrandPopUpSignUpFormTab-form-input-heading">
+//                               Phone Number *
+//                             </Form.Label>
+//                             <PhoneInput
+//                               country="cm"
+//                               inputStyle={inputStyle}
+//                               onlyCountries={["cm"]}
+//                               value={subscribe?.phone_number}
+//                               onChange={(e) => {
+//                                 setSubscribe((prev) => ({
+//                                   ...prev,
+//                                   phone_number: `+${e}`,
+//                                 }));
+//                               }}
+//                             />
+//                           </Form.Group>
+//                         </div>
+//                       </div>
+//                       <div className="mt-4 d-flex justify-content-center gap-4">
+//                         <Button
+//                           onClick={handleBack}
+//                           className="w-full btn-back-erra"
+//                         >
+//                           <svg
+//                             width="17"
+//                             height="17"
+//                             viewBox="0 0 17 17"
+//                             fill="none"
+//                             xmlns="http://www.w3.org/2000/svg"
+//                           >
+//                             <path
+//                               d="M5.71602 9.16797L9.44935 12.9013L8.49935 13.8346L3.16602 8.5013L8.49935 3.16797L9.44935 4.1013L5.71602 7.83464H13.8327V9.16797H5.71602Z"
+//                               fill="#171A1F"
+//                             />
+//                           </svg>
+//                           Go Back
+//                         </Button>
+//                         <Button
+//                           variant="contained"
+//                           className="w-full"
+//                           style={{ backgroundColor: "#171A1F" }}
+//                           onClick={purchasePlan}
+//                         >
+//                           Pay and Subscribe
+//                         </Button>
+//                       </div>
+//                     </div>
+//                   )}
+//                 </div>
+//               )}
+//             </div>
+//           </div>
+//         </Modal.Body>
+//       </Modal>
+//     </>
+//   );
+// };
+
+// export default ErrandiaBooster;
+  
+
+
+
+  ------------------------
+
+
+       <div className="container p-3">
+            <div className="text-center">
+              <Stepper activeStep={activeStep} alternativeLabel>
+                {steps.map((label, index) => (
+                  <Step key={index}>
+                    <StepLabel></StepLabel>
+                  </Step>
+                ))}
+              </Stepper>
+              {activeStep === steps.length ? (
+                <>
+                  {paymentStatus === "PENDING" ? ( // Show loader while payment is processing
+                    <div className="mt-5 text-center">
+                      <Loader />
+                      <h2 className="mt-4">Processing Payments</h2>
+                      <p className="mt-2">
+                        A mobile money alert will be sent to you shortly to
+                        confirm your <b>Business Booster Plan</b> subscription
+                        of 5,000 XAF
+                      </p>
+                      <p className="mt-4">
+                        If you have questions or need support, contact us at{" "}
+                        <a href="#">admin@errandia.com</a>
+                      </p>
+                    </div>
+                  ) : paymentStatus === "SUCCESS" ? ( // Show success message
+                    <div className="success-message">
+                      <svg
+                        width="209"
+                        height="210"
+                        viewBox="0 0 209 210"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          y="0.5"
+                          width="209"
+                          height="209"
+                          rx="12"
+                          fill="#F1F4FF"
+                        />
+                        <path d="M162 56.5H48V170.5H162V56.5Z" fill="#A7AFFF" />
+                        <path
+                          d="M143.136 101.554L130.254 89.1435L166.908 51.3398L179.787 63.75L143.136 101.554Z"
+                          fill="#2718FF"
+                        />
+                        <path
+                          d="M162.001 56.5H161.938L88.4551 132.772L101.337 145.183L162.001 82.2165V56.5Z"
+                          fill="#020053"
+                        />
+                        <path
+                          d="M75.2044 95.3453L62.8203 108.254L101.34 145.209L113.725 132.3L75.2044 95.3453Z"
+                          fill="#020053"
+                        />
+                      </svg>
+
+                      <h2 className="mt-4">Payment Successful</h2>
+                      <p className="mt-2">
+                        You can now access unlimited errands with your current
+                        plan.
+                      </p>
+                      <Button
+                        variant="contained"
+                        className="w-50 header-button-blue mt-4 text-center"
+                        onClick={handleReset}
+                      >
+                        Okay
+                      </Button>
+                    </div>
+                  ) : paymentStatus === "FAILED" ? ( // Show failure message
+                    <div className="failure-message">
+                      <svg
+                        width="191"
+                        height="191"
+                        viewBox="0 0 191 191"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="0.5"
+                          y="0.5"
+                          width="190"
+                          height="190"
+                          rx="12"
+                          fill="#F1F4FF"
+                        />
+                        <path
+                          d="M147.773 51.4102H44.1367V155.047H147.773V51.4102Z"
+                          fill="#A7AFFF"
+                        />
+                        <path
+                          d="M132 77.5038L133.061 76.4432L132 75.3825L125.057 68.4393L123.996 67.3787L122.936 68.4393L96.4697 94.9052L70.0038 68.4393L68.9432 67.3787L67.8825 68.4393L60.9393 75.3825L59.8787 76.4432L60.9393 77.5038L87.4052 103.97L60.9393 130.436L59.8787 131.496L60.9393 132.557L67.8825 139.5L68.9432 140.561L70.0038 139.5L96.4697 113.034L122.936 139.5L123.996 140.561L125.057 139.5L132 132.557L133.061 131.496L132 130.436L105.534 103.97L132 77.5038Z"
+                          fill="#1006AC"
+                          stroke="#1006AC"
+                          strokeWidth="3"
+                        />
+                      </svg>
+
+                      <h2 className="mt-4">Payment Unsuccessful</h2>
+                      {/* <p className="mt-2">
+                        Payment Unsuccessful. Please try again.
+                      </p> */}
+                      <div className="mt-4 d-flex justify-content-center gap-4">
+                        <Button
+                          onClick={() => {
+                            setActiveStep(0);
+                            setSubscribe((prev) => {
+                              return {
+                                plan_id: null,
+                                shop_id: shopId,
+                                phone_number: null,
+                              };
+                            });
+                          }}
+                          className="w-25 header-button-blue"
+                        >
+                          Retry
+                        </Button>
+                        <Button className="w-25 btn-back" onClick={handleReset}>
+                          Close
+                        </Button>
+                      </div>
+                    </div>
+                  ) : null}
+                </>
+              ) : (
+                <div className="mt-4">
+                  {activeStep === 0 && (
+                    <>
+                      <div className="text-center">
+                        <h2 className="mt-4">Buy a Booster</h2>
+                        <p className="mt-2">
+                          Get a plan now and enjoy premium features on Errandia
+                        </p>
+                      </div>
+                      <div className="d-flex gap-4 justify-content-center flex-wrap mt-5">
+                        {isModalLoader ? (
+                          <Loader />
+                        ) : (
+                          plans?.map((plan) => (
+                            <Card
+                              className="card-subscription border rounded-lg"
+                              key={plan.id}
+                            >
+                              <p className="popular-sec-errandiaBooster">
+                                Popular
+                              </p>
+                              <CardContent className="p-4">
+                                <h4 className="text-lg font-bold">
+                                  {plan?.name}
+                                </h4>
+                                <h2 className="text-2xl font-bold">{`${plan?.unit_price}${plan?.currency}`}</h2>
+                                <p className="">per month</p>
+                                <p className="time-errandiaBooster">
+                                  Free for {plan?.duration_time} month
+                                </p>
+                                <div className="d-flex mt-4">
+                                  <svg
+                                    width="25"
+                                    height="24"
+                                    viewBox="0 0 25 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      fillRule="evenodd"
+                                      clipRule="evenodd"
+                                      d="M9.50039 16.2016L5.30039 12.0016L3.90039 13.4016L9.50039 19.0016L21.5004 7.00156L20.1004 5.60156L9.50039 16.2016Z"
+                                      fill="#2718FF"
+                                    />
+                                  </svg>
+                                  <p>{parse(plan?.description)}</p>
+                                </div>
+
+                                <Button
+                                  variant="contained"
+                                  className="w-full mt-3"
+                                  style={{ backgroundColor: "#171A1F" }}
+                                  onClick={() => {
+                                    handleNext();
+                                    setMakePlan({
+                                      name: plan?.name,
+                                      unit_price: plan?.unit_price,
+                                      currency: plan?.currency,
+                                      period: plan?.period,
+                                    });
+                                    setSubscribe((prev) => ({
+                                      ...prev,
+                                      plan_id: plan?.id,
+                                    }));
+                                  }}
+                                >
+                                  Subscribe now
+                                </Button>
+                              </CardContent>
+                            </Card>
+                          ))
+                        )}
+                      </div>
+                    </>
+                  )}
+                  {activeStep === 1 && (
+                    <div className="text-center">
+                      <div className="text-center">
+                        <h2 className="mt-4">Make Payment</h2>
+                        <p className="mt-2">
+                          how will you like to pay for your subscription
+                        </p>
+                      </div>
+                      <div className="d-flex justify-content-center">
+                        <div className="amount-card-errandia">
+                          <div className="d-flex" style={{ zIndex: "1" }}>
+                            <div className="ms-2" style={{ textAlign: "left" }}>
+                              <p className="text-left">Subscribe to:</p>
+                              <h5>{makePlan?.name}</h5>
+                            </div>
+                          </div>
+                          <div style={{ zIndex: "1" }} className="text-end">
+                            <h5>{`${makePlan?.unit_price}${makePlan?.currency}`}</h5>
+                            <p>per {makePlan?.period}</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="d-flex justify-content-center">
+                        <div className="phone-input-sub">
+                          <Form.Group className="" controlId="formBasicEmail">
+                            <Form.Label className="runErrandPopUpSignUpFormTab-form-input-heading">
+                              Phone Number *
+                            </Form.Label>
+                            <PhoneInput
+                              country="cm"
+                              inputStyle={inputStyle}
+                              onlyCountries={["cm"]}
+                              value={subscribe?.phone_number}
+                              onChange={(e) => {
+                                setSubscribe((prev) => ({
+                                  ...prev,
+                                  phone_number: `+${e}`,
+                                }));
+                              }}
+                            />
+                          </Form.Group>
+                        </div>
+                      </div>
+                      <div className="mt-4 d-flex justify-content-center gap-4">
+                        <Button
+                          onClick={handleBack}
+                          className="w-full btn-back-erra"
+                        >
+                          <svg
+                            width="17"
+                            height="17"
+                            viewBox="0 0 17 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M5.71602 9.16797L9.44935 12.9013L8.49935 13.8346L3.16602 8.5013L8.49935 3.16797L9.44935 4.1013L5.71602 7.83464H13.8327V9.16797H5.71602Z"
+                              fill="#171A1F"
+                            />
+                          </svg>
+                          Go Back
+                        </Button>
+                        <Button
+                          variant="contained"
+                          className="w-full"
+                          style={{ backgroundColor: "#171A1F" }}
+                          onClick={purchasePlan}
+                        >
+                          Pay and Subscribe
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+
+          --------
+
+          // const UserProfileBusinessFound = ({
+//   detailSelected,
+//   setDetailSelected,
+//   setErrandDetailsId,
+// }) => {
+//   const dispatch = useDispatch();
+//   const navigate = useNavigate();
+
+//   const [loader, setLoader] = useState(false);
+
+//   const [isOpen, setIsOpen] = useState(false);
+
+//   const [singleBusiness, setSingleBusiness] = useState(null);
+
+//   const [plans, setPlans] = useState(null);
+
+//   console.log("plans booster", plans);
+
+//   const [shopId, setShopId] = useState(null);
+
+//   const businessCollection = useSelector((store) => store?.businessData);
+//   console.log("businessCollection user", businessCollection);
+
+//   useEffect(() => {
+//     console.log("check business");
+//     if (!businessCollection) {
+//       console.log("first if");
+//       const businessHandler = async () => {
+//         try {
+//           setLoader(true);
+//           dispatch(setIsPending(true));
+//           const res = await getApi(apis.business, token());
+//           setLoader(false);
+//           dispatch(setIsPending(false));
+//           dispatch(addBusiness(res?.data?.data?.items));
+//         } catch (err) {
+//           setLoader(false);
+//           dispatch(setIsPending(false));
+//           console.log(err);
+//           if (err.response && err.response.status === 404) {
+//             console.log("Resource not found!");
+//             notifyError("Oops! The request was not found.");
+//           }
+//         }
+//       };
+
+//       businessHandler();
+//     }
+//   }, []);
+
+//   // useEffect(() => {s
+//   //   if (businessCollection !== null) {
+//   //     setLoader(false);
+//   //   }
+//   // }, []);
+//   const isPendingFromStore = useSelector(
+//     (store) => store?.searchProduct?.isPending
+//   );
+
+//   console.log("bS rnder again");
+
+//   useEffect(() => {
+//     const fetchAllBoosterPlans = async () => {
+//       try {
+//         const params = new URLSearchParams({
+//           type: "boosting",
+//         });
+//         dispatch(setIsPending(true));
+//         const res = await getApi(apis.getAllPlans + `?${params}`);
+
+//         console.log("fetchAllBoosterPlans", res);
+//         dispatch(setIsPending(false));
+//         setPlans(res.data.data.items);
+//       } catch (err) {
+//         dispatch(setIsPending(false));
+//         console.log(err);
+//         notifyError("Oops! The request was not found.");
+//       }
+//     };
+//     if (isOpen) {
+//       fetchAllBoosterPlans();
+//     }
+//   }, [isOpen]);
+
+//   return (
+//     <>
+//       {isPendingFromStore ? (
+//         <Loader />
+//       ) : !businessCollection || businessCollection.length === 0 ? (
+//         <UserProfileNoBusinessFound />
+//       ) : (
+//         <>
+//           <div className="container">
+//             <>
+//               <div className="row">
+//                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 productsFromTheBusiness-productServiceButtons">
+//                   <h6 className="productsFromTheBusiness-section-heading">
+//                     {businessCollection && businessCollection.length} Businesses
+//                   </h6>
+
+//                   <button
+//                     type="button"
+//                     class="btn btn-primary btn-lg businessUserView-location-whiteButton"
+//                     style={{ cursor: "pointer" }}
+//                     onClick={() => {
+//                       dispatch(modalAddBusinessToggle());
+//                       dispatch(setAddBusinessModalTrue());
+//                     }}
+//                   >
+//                     <img
+//                       src={addNoBusiness}
+//                       alt="addNoBusiness"
+//                       className="img-fluid"
+//                     />
+//                     Add Business
+//                   </button>
+//                 </div>
+//               </div>
+
+//               <div className="row   errandos-mobile-tab">
+//                 {businessCollection &&
+//                   businessCollection.map((business) => {
+//                     const initials = getInitials(business?.name);
+//                     const fallbackImage = createFallbackImage(initials);
+//                     return (
+//                       <div className="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+//                         <div className="card userProfileBusinessFound-container mt-4 mb-4">
+//                           <div className="card-body">
+//                             <div
+//                               onClick={() => {
+//                                 navigate(
+//                                   `/business-profile-user-view/${business?.slug}`
+//                                 );
+//                               }}
+//                               style={{ cursor: "pointer" }}
+//                             >
+//                               <div className="ourErrandosImageContainer">
+//                                 <img
+//                                   className="ourErrandosImage"
+//                                   src={
+//                                     business?.image
+//                                       ? `${IMAGE_BASE_URL}${business?.image}`
+//                                       : fallbackImage
+//                                   }
+//                                   onError={(e) => {
+//                                     e.target.src = fallbackImage;
+//                                     // dispatch(addFallBackImage(fallbackImage));
+//                                   }}
+//                                   alt="matrixUserBusiness"
+//                                 />
+//                               </div>
+//                             </div>
+//                             <div
+//                               className="userProfileBusinessFound-text-container"
+//                               onClick={() => {
+//                                 navigate(
+//                                   `/business-profile-user-view/${business?.slug}`
+//                                 );
+//                               }}
+//                               style={{ cursor: "pointer" }}
+//                             >
+//                               <img src={businessTick} alt="businessTick" />
+
+//                               <p className="userProfileBusinessFound-category">
+//                                 {business?.category?.name}
+//                               </p>
+//                               <div>
+//                                 <h5 className="card-title userProfileBusinessFound-heading">
+//                                   {business?.name}
+//                                 </h5>
+//                               </div>
+
+//                               <div className="d-flex align-items-center ourErrandosTextIcon ourErrandosLocationAndText">
+//                                 <img
+//                                   src={businessNearYouLocationIcon}
+//                                   alt="Location Icon"
+//                                 />
+//                                 <p className="userProfileBusinessFound-Text">
+//                                   {business?.town &&
+//                                     `${business?.town?.name}, `}
+
+//                                   {business?.region && business?.region?.name}
+//                                 </p>
+//                               </div>
+//                             </div>
+
+//                             <div className="productsBusinessUserProfile-buttons-container">
+//                               <Button
+//                                 variant="primary"
+//                                 className="userProfileBusinessFound-delete"
+//                                 onClick={() => {
+//                                   dispatch(modalErrandiaBoosterToggle());
+//                                   dispatch(setErrandiaBoosterModalTrue());
+//                                   setIsOpen(true);
+//                                   setShopId(business?.id);
+//                                 }}
+//                               >
+//                                 <img src={boost} alt="boost" />
+//                                 Boost
+//                               </Button>
+
+//                               <div className="allPublicOffices-dropDownContainer">
+//                                 <Dropdown drop="down">
+//                                   <Dropdown.Toggle
+//                                     variant="success"
+//                                     id="dropdown-basic"
+//                                     className="userProfileBusinessFound-call-button"
+//                                     bsPrefix="custom-dropdown-toggle"
+//                                   >
+//                                     <img
+//                                       src={threeDotDropDown}
+//                                       alt="threeDotDropDown"
+//                                     />
+//                                   </Dropdown.Toggle>
+
+//                                   <Dropdown.Menu className="userProfileBusinessFound-dropDown-container">
+//                                     <Dropdown.Item
+//                                       className="userProfileBusinessFound-dropDown"
+//                                       onClick={() => {
+//                                         // console.log("1");
+//                                         dispatch(
+//                                           modalAddBusinessBranchToggle()
+//                                         );
+//                                         dispatch(
+//                                           setAddBusinessBranchModalTrue()
+//                                         );
+//                                       }}
+//                                     >
+//                                       <img
+//                                         src={addBusinessDropDown}
+//                                         alt="addBusinessDropDown"
+//                                       />
+//                                       Add Business Branch{" "}
+//                                     </Dropdown.Item>
+//                                     <Dropdown.Item
+//                                       className="userProfileBusinessFound-dropDown"
+//                                       onClick={() => {
+//                                         // console.log("1");
+//                                         dispatch(modalVerifyBusinessToggle());
+//                                         dispatch(setVerifyBusinessModalTrue());
+//                                       }}
+//                                     >
+//                                       <img
+//                                         src={verifyBusiness}
+//                                         alt="verifyBusiness"
+//                                       />
+//                                       Verify Business{" "}
+//                                     </Dropdown.Item>
+//                                     <Dropdown.Item
+//                                       className="userProfileBusinessFound-dropDown"
+//                                       onClick={() => {
+//                                         setDetailSelected("EditBusinessForm");
+//                                         setErrandDetailsId(business);
+//                                       }}
+//                                     >
+//                                       <img
+//                                         src={editBusiness}
+//                                         alt="editBusiness"
+//                                       />
+//                                       Edit Business{" "}
+//                                     </Dropdown.Item>
+//                                     <Dropdown.Item
+//                                       className="userProfileBusinessFound-dropDown"
+//                                       style={{ color: "red" }}
+//                                       onClick={() => {
+//                                         // console.log("first");
+//                                         dispatch(modalDeleteToggle());
+//                                         dispatch(setDeleteModalTrue());
+//                                         setSingleBusiness(business);
+//                                       }}
+//                                     >
+//                                       <img
+//                                         src={deleteBusiness}
+//                                         alt="deleteBusiness"
+//                                       />
+//                                       Delete Business{" "}
+//                                     </Dropdown.Item>
+//                                   </Dropdown.Menu>
+//                                 </Dropdown>
+//                               </div>
+//                             </div>
+//                           </div>
+//                         </div>
+//                       </div>
+//                     );
+//                   })}
+//               </div>
+//             </>
+//           </div>
+//           <DeleteBusinessModal singleBusiness={singleBusiness} />
+//           <AddBusinessFormModal />
+//           <AddBusinessBranchModal />
+//           <VerifyBusinessLocation />
+//           {isOpen && (
+//             <ErrandiaBooster
+//               setIsOpen={setIsOpen}
+//               isOpen={isOpen}
+//               plans={plans}
+//               setPlans={setPlans}
+//               shopId={shopId}
+//             />
+//           )}
+//         </>
+//       )}
+//     </>
+//   );
+// };
+
+// export default UserProfileBusinessFound;
